@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+
+  <meta charset="utf-8">
+  <title>MENU</title>
+  
+  <link rel="stylesheet" href="fontface.css">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="stylesheet" href="css/menu_colors.css">
+  
+  
+  
+  
+</head>
+
+
+<body>
+  
+  
+  <div ng-app="slidemenu" ng-controller="prodSec" >
+    <input type="checkbox" id="products_main" 
+           name="section" class="def sec" 
+           ng-model="viewport['products'].expand">
+    <label for="products_main"> 
+      <span>Products</span>
+    </label>
+    <div class="viewport" id="viewport_products"
+         ng-controller="prodSub"
+         ng-style="{'max-height': viewport['products'].height()}">
+      <ul>
+        <li>
+          <input type="checkbox" id="products_our" 
+                 name="subsection" class="def sub"
+                 ng-model="$parent.viewport['products'].expand.sub1">
+          <label for="products_our">
+            <span>Our Products</span>
+          </label>
+          <div class="viewport" id="viewport_products_ourProducts"
+               ng-style="{'max-height': viewport['products'].subs['our_products'].height()}">
+            <ul>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Presentation Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Manual Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Brochure Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Booklet Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Poster Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Newsletter Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Catalog Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Flyer Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Postcard Printing</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Proposal Printing</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="products_bind" name="subsection" class="def sub" />
+          <label for="products_bind">
+            <span>Binding Products</span>
+          </label>
+          <div class="viewport">
+            <ul>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Spiral Binding</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Twin Loop Wire Binding</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Comb Binding</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>3-Ring Binding</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Tape Binding</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Velo Binding</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for=""> hef
+                  <span>Saddle Stitch Binding</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Perfect Binding</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Postcard Printing</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <input type="checkbox" id="products_serv" name="subsection" class="def sub" />
+          <label for="products_serv">
+            <span>Services</span>
+          </label>
+          <div class="viewport">
+            <ul>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>Warehousing and Kiting</span>
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="" id="">
+                <label for="">
+                  <span>CDs, DVDs, and Flash Drives</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <span></span>
+  </div>
+  
+  
+  
+  <script src="bower_components/jQuery/dist/jquery.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="js/ang/controllers.js"></script>
+  <script src="js/menu.js"></script>
+ 
+</body>
+
+</html>

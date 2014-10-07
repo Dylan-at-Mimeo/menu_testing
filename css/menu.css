@@ -1,0 +1,257 @@
+
+ /*
+    Document   : css/menu．css
+    Created on : 2014-09-28 11:47 PM
+    Author     : dwells89
+    Description:
+    Purpose of the stylesheet follows. 
+    To change this template use Tools | Templates.
+*/
+ root {
+   display: block;
+ }
+ body {
+   margin: 0;
+   min-height: 100vh;
+   font-size: 62.5%;
+   font-size: 102.5%;
+   letter-spacing: .1113ch;
+   line-height: 1;
+   text-rendering: optimizeLegibility;
+ }
+ body * {
+ }
+ /*************************************
+                Default
+*************************************/
+ input[type="checkbox"][class*="def"] {
+   display: none;
+ }
+ input[type="checkbox"][class*="def"] + label {
+   display: inline-block;
+   box-sizing: border-box;
+   width: 100%;
+   text-align: center;
+ }
+ input[type="checkbox"][class*="def"] + label > span {
+   display: inline-block;
+   -webkit-user-select: none;
+   padding: 1em 0;
+   font-size: 1.125em;
+   letter-spacing: .1895ch;
+   font-family: 'Roboto', Helvetica, san-serif;
+ }
+ /************************************
+                Section
+*************************************/
+ input[type="checkbox"][class*="def"][class*="sec"] + label {
+   text-align: left;
+   padding-left: 15%;
+   background-color: rgba(58, 55, 70, 1);
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] + label:hover {
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] + label > span {
+   font-size: 1.27859em;
+   font-weight: 500;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] + label:hover > span {
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked + label:hover > span {
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] + label:active > span {
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked + label:active > span {
+ }
+ 
+
+/************************************/
+/************************************/
+/************************************/
+/************************************
+                Viewport
+*************************************/
+input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] {
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height .35s ease-in;
+   transition-delay: .15s;
+ }
+/* 
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] {
+   max-height: 10em;
+   transition: max-height .5s ease-out;
+   transition-delay: .15s;
+ }
+ */
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] {
+   transition: max-height .5s ease-out;
+   transition-delay: .15s;
+ } 
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li > div[class*="viewport"] {
+   overflow: hidden;
+   max-height: 0;
+   transition: max-height .35s ease-in;
+   transition-delay: .15s;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul,
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > 
+li > div[class*="viewport"] > ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+ }
+
+/************************************/
+/************************************/
+/************************************/
+/************************************/
+/************************************/
+/************************************/
+
+ /************************************
+                Section Style
+*************************************/
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] + span {
+   display: block;
+   width: 100%;
+   box-sizing: border-box;
+   -webkit-user-select: none;
+   background-color: rgba(58, 55, 70, 1);
+   height: 2em;
+   box-shadow: inset 0 .5em 0 0em rgba(20, 0, 10, .15);
+   max-height: 0;
+   border-top: 0 solid rgba(245, 235, 235, 1);
+   transition: max-height 5.35s ease-in, border-top .65s ease-in;
+   transition-delay: .1s;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked + label {
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked + label > span {
+   color: rgb(200, 200, 200);
+   font-size: 1.27659em;
+   transition: color .35s ease-out;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] + span {
+   max-height: 2em;
+   border-top: .1em solid rgba(245, 235, 235, 1);
+   box-shadow: inset 0 .5em 0 0em rgba(20, 0, 10, .15);
+   transition: max-height .35s ease-out, border-top .65s ease-out;
+   transition-delay: .05s;
+ }
+ input[type="checkbox"][id="products_main"] + label {
+ }
+ /************************************
+                Subsection
+*************************************/
+ input[type="checkbox"][class*="def"][class*="sub"] {
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label {
+   text-align: left;
+   padding-left: 15%;
+   box-sizing: border-box;
+   background-color: rgb(200, 200, 200);
+   box-shadow: inset 0 -.15em 0 0 rgba(72, 72, 72, .5);
+   border-bottom: 0em solid rgba(149, 149, 149, .85);
+   border-top: 0em solid rgba(149, 149, 149, .5);
+   transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color .2s ease;
+   transition-delay: .25s;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label {
+   border-bottom: .25em solid rgba(149, 149, 149, .5);
+   border-top: .25em solid rgba(149, 149, 149, .5);
+   transition: border-top .15s ease-out, border-bottom .15s ease-out, background-color .2s ease;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label:hover {
+   background-color: rgb(155, 155, 160);
+   border-bottom: .25em solid rgba(229, 229, 229, .5);
+   border-top: .25em solid rgba(129, 29, 229, .5);
+   box-shadow: inset 0 -.15em 0 0 rgba(172, 172, 172, .75);
+   transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color 2s ease;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label:active {
+   background-color: rgb(125, 125, 130);
+   border-bottom: .25em solid rgba(199, 99, 99, 1);
+   border-top: .25em solid rgba(199, 99, 99, 1);
+   transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color 2s ease;
+ }
+ /* input[type="checkbox"][class*="def"][class*="sub"] + label {
+  background-color: rgba(131, 232, 129,1);
+  box-shadow: inset 0 -.15em 0 0 rgba(203, 33, 90, .75);
+  border-bottom: .15em solid rgba(153, 33, 90, .25);
+  border-top: .5em solid rgba(153, 33, 90, .15);
+
+} */
+ /* ^^^ */
+ input[type="checkbox"][class*="def"][class*="sub"] + label > span {
+   padding: .678375em 0;
+   color: rgba(245, 235, 235, 1);
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span {
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label:active > span {
+ }
+ input[type="checkbox"][class*="def"][class*="sub"]:checked + label {
+ }
+ input[type="checkbox"][class*="def"][class*="sub"]:checked + label > span {
+ }
+ /*
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul {
+   background-color: rgb(200, 200, 200);
+   transition: background-color 1s ease;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul {
+   background-color: rgb(72, 72, 72);
+   transition: background-color 1s ease;
+   transition-delay: .5s;
+ }
+*/
+ /* input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li {
+  
+  transform-origin: top;
+  transform: rotateX(-90deg) translateY(-1em);
+  transition: transform 1.15s ease;
+} */
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li:nth-child(1) {
+   transform-origin: top;
+   transform: rotateX(-90deg) translateY(-1em);
+   transition: transform .75s ease;
+   transition-delay: .15s;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li:nth-child(2) {
+   transform-origin: top;
+   transform: rotateX(-90deg) translateY(-4em);
+   transition: transform .75s ease;
+   transition-delay: .15s;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li:nth-child(3) {
+   transform-origin: top;
+   transform: rotateX(-90deg) translateY(-6em);
+   transition: transform .75s ease;
+   transition-delay: .15s;
+ }
+ /* 
+input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul li {
+  transform-origin: top;
+  transform: rotateX(0deg) translateY(0em);
+  transition: transform .85s ease;
+}
+ */
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul li:nth-child(1) {
+   transform-origin: top;
+   transform: rotateX(0deg) translateY(0em);
+   transition: transform .5s ease;
+   transition-delay: .05s;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul li:nth-child(2) {
+   transform-origin: top;
+   transform: rotateX(0deg) translateY(0em);
+   transition: transform .5s ease;
+   transition-delay: .1s;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul > li:nth-child(3) {
+   transform-origin: top;
+   transform: rotateX(0deg) translateY(0em);
+   transition: transform .5s ease;
+   transition-delay: .15s;
+ }

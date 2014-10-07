@@ -1,0 +1,395 @@
+ 
+/****************************************
+ * 
+ *          Section Colors
+ * 
+ * **************************************/
+
+
+/*** PRODUCTS ***/
+
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked {}
+
+
+/****/
+
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label {
+  background-image: linear-gradient(to bottom, 
+    rgba(233,32,89,1) 0%, rgba(233,32,89,1) 49%, 
+    rgba(51,51,51,1) 50%, rgba(51,51,51,1) 100%);
+  background-size: 100% 300%;
+  
+  background-position: 0% 400%;
+  box-shadow: inset 0 0 0 0 rgba(20, 0, 10, .15);
+  border-top: 0 solid rgb(200, 200, 200);
+  border-bottom: .0em solid rgba(245, 235, 235, 1);
+
+  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  transition-delay: .14s;
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:hover {
+  background-position: 0% 300%;
+  box-shadow: inset 0 0 0 0 rgba(20, 0, 10, .15);
+  border-top: 0 solid rgb(200, 200, 200);
+  border-bottom: .0em solid rgba(245, 235, 235, 1);
+  
+  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  transition-delay: .14s;
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:active {
+  background-position: 0% 305%;
+  box-shadow: inset 0 0 0 0 rgba(20, 0, 10, .15);
+  border-top: 0 solid rgb(200, 200, 200);
+  border-bottom: .0em solid rgba(245, 235, 235, 1);
+  
+  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  transition-delay: .14s;
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label {
+  background-position: 0% 400%;
+  border-top: .33333em solid rgba(233,32,89,1);
+  border-bottom: .085em solid rgba(245, 235, 235, 1);
+  box-shadow: inset 0 -.5em 0 0em rgba(20, 0, 10, .15);
+  
+  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  transition-delay: .14s;
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label:hover {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label:active {
+
+}
+
+
+/****/
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label > span {
+  font-family: 'Roboto-Light';
+  color: rgba(245, 245, 250, 1);
+  letter-spacing: .1895ch;
+  text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
+
+  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:hover > span {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:active > span {
+  color: rgba(245, 245, 250, 1);
+  letter-spacing: .1895ch;
+  text-shadow: .01em .01em .5em rgba(255, 255, 255, .75);
+  
+  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label > span {
+  font-family: 'Roboto-Medium';
+  color:  rgba(233,32,89,1);
+  letter-spacing: .1895ch;
+  text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
+  
+  transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label:hover > span {
+  color:  rgba(233,32,89,1);
+  letter-spacing: .2795ch;
+  text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
+  
+  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label:active > span {
+  color:  rgba(233,32,89,1);
+  letter-spacing: .1895ch;
+  text-shadow: .01em .01em .5em rgba(233,32,89,1);
+  
+  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+}
+
+
+/****/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
++ label ~ div[class="viewport"] + span {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
++ label:hover ~ div[class="viewport"] + span {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
++ label:active ~ div[class="viewport"] + span {}
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
++ label ~ div[class="viewport"] + span {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
++ label:hover ~ div[class="viewport"] + span {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
++ label:active ~ div[class="viewport"] + span {}
+
+/****/ 
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label,
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
++ label ~ div[class="viewport"] + span {
+  background-color: rgba(51,51,51,1);
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:hover,
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
++ label:hover ~ div[class="viewport"] + span {
+  
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:active,
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
++ label:active ~ div[class="viewport"] + span {}
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label,
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
++ label ~ div[class="viewport"] + span {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label:hover,
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
++ label:hover ~ div[class="viewport"] + span {
+ 
+}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label:active,
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
++ label:active ~ div[class="viewport"] + span {}
+
+/****/
+
+
+
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] ~ div[class="viewport"] > ul > li {}
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked ~ div[class="viewport"] > ul > li  {}
+
+
+/****/
+
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"]:checked {}
+
+
+/****/
+
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label {
+  background-color: rgba(233,32,89,1);
+  box-shadow: inset 0 -.15em 0 0 rgba(105, 15, 41,.5);
+  border-bottom: .25em solid rgba(182, 26, 70,.85);
+  border-top: .25em solid rgba(182, 26, 70, .5);
+}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label:hover {
+
+}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label:active {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label:hover {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label:active {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"]:checked + label {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"]:checked + label:hover {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"]:checked + label:active {}
+
+
+/****/
+
+
+   
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label > span {
+  font-family: 'Roboto-Light';
+  color: rgba(245, 235, 235, 1);
+  padding: .478375em 0;
+  
+
+  letter-spacing: .1895ch;
+
+  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span  {
+  letter-spacing: .2795ch;
+
+  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label:active > span  {
+  letter-spacing: .1895ch;
+  text-shadow: .01em .01em .5em rgba(245, 235, 235, 1);
+  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+
+}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label > span  {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span  {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"]:checked + label > span  {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"]:checked + label:hover > span  {}
+/*^^^^^^^^*/
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
+~ div[class="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"]:checked + label:active > span  {}
+
+
+/****/
+
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul {
+   background-color: rgba(233,32,89,1);
+   transition: background-color 1s ease;
+   transition-delay: .5s;
+ }
+input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul {
+   background-color: rgba(182, 26, 70,1);
+   transition: background-color 1s ease;
+   transition-delay: .5s;
+ }
+
+/****/
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="checkbox"][class*="def"][class*="sec"] + label {
+   border-top: 0 solid rgb(200, 200, 200);
+   border-bottom: .0em solid rgba(245, 235, 235, 1);
+   background-color: rgba(58, 55, 70, 1);
+   box-shadow: inset 0 0 0 0 rgba(20, 0, 10, .15);
+   transition: box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+   transition-delay: .14s;
+ }
+input[type="checkbox"][class*="def"][class*="sec"] + label:hover {
+ }
+
+/****/
+ input[type="checkbox"][class*="def"][class*="sec"] + label > span {
+   
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] + label:hover > span {
+
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked + label:hover > span {
+
+   transition: color .35s ease-out;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"] + label:active > span {
+   transition: color .35s ease-out;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked + label:active > span {
+
+   transition: color .35s ease-out;
+ }
+input[type="checkbox"][class*="def"][class*="sec"]:checked + label > span {
+
+   font-size: 1.27659em;
+   transition: color .35s ease-out;
+ }
+/****/
+ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] + span {
+   display: block;
+   width: 100%;
+   box-sizing: border-box;
+   -webkit-user-select: none;
+   background-color: rgba(58, 55, 70, 1);
+   height: 2em;
+   box-shadow: inset 0 .5em 0 0em rgba(20, 0, 10, .15);
+   max-height: 0;
+   border-top: 0 solid rgba(245, 235, 235, 1);
+   transition: max-height .25s ease-in, border-top .65s ease-in;
+   transition-delay: .15s;
+ }
+ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class="viewport"] + span {
+   max-height: 2em;
+   border-top: .1em solid rgba(245, 235, 235, 1);
+   box-shadow: inset 0 .5em 0 0em rgba(20, 0, 10, .15);
+   transition: max-height .25s ease-out, border-top .65s ease-out;
+   transition-delay: .05s;
+ }
+/****/
+
+
+
+
+
+/*** SOLUTIONS ***/
+
+
+
+/*** MARKETPLACE ***/
+
+
+
+/*** SUPPORT ***/
+
+
+/****************************************
+ * 
+ *          Subsection Colors
+ * 
+ * **************************************/
+
+/*** PRODUCTS ***/
+
+
+
+/*** SOLUTIONS ***/
+
+
+
+/*** MARKETPLACE ***/
+
+
+
+/*** SUPPORT ***/
+
