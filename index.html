@@ -12,35 +12,28 @@
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/menu_colors.css">
   
-  
-  
-  
+
 </head>
 
 
 <body>
   
   
-  <div ng-app="slidemenu" ng-controller="prodSec" >
+  <div>
     <input type="checkbox" id="products_main" 
-           name="section" class="def sec" 
-           ng-model="viewport['products'].expand">
+           name="section" class="def sec">
     <label for="products_main"> 
       <span>Products</span>
     </label>
-    <div class="viewport" id="viewport_products"
-         ng-controller="prodSub"
-         ng-style="{'max-height': viewport['products'].height()}">
+    <div class="viewport" id="viewport_products">
       <ul>
         <li>
           <input type="checkbox" id="products_our" 
-                 name="subsection" class="def sub"
-                 ng-model="$parent.viewport['products'].expand.sub1">
+                 name="subsection" class="def sub">
           <label for="products_our">
             <span>Our Products</span>
           </label>
-          <div class="viewport" id="viewport_products_ourProducts"
-               ng-style="{'max-height': viewport['products'].subs['our_products'].height()}">
+          <div class="viewport" id="viewport_products_ourProducts">
             <ul>
               <li>
                 <input type="checkbox" name="" id="">
@@ -199,7 +192,6 @@
   
   
   <script src="bower_components/jQuery/dist/jquery.min.js"></script>
-  <script src="bower_components/angular/angular.min.js"></script>
   <script src="js/ang/controllers.js"></script>
   <script src="js/menu.js"></script>
  
