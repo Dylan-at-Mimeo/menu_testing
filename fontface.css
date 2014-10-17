@@ -2,7 +2,12 @@
 @font-face {
 	font-family: "Roboto-Thin";
 	src: url('font/Roboto/eot/Roboto-Thin.eot');
-	src: local('☺'), url('font/Roboto/woff/Roboto-Thin.woff') format('woff'), url('font/Roboto/ttf/Roboto-Thin.ttf') format('truetype'), url('font/Roboto/svg/Roboto-Thin.svg') format('svg');
+	src: 
+    /*local('☺'),*/
+    url('font/Roboto/svg/Roboto-Thin.svg') format('svg'), 
+    url('font/Roboto/woff/Roboto-Thin.woff') format('woff'),
+    url('font/Roboto/ttf/Roboto-Thin.ttf') format('truetype'); 
+    
 	font-weight: normal;
 	font-style: normal;
 }
