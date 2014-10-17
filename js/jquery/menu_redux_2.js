@@ -34,7 +34,7 @@ var MENU = function() {
     Value: function(operation, expectation, outcome) {
       this.is = operation;
       this.want = expectation;
-      this.got = outcome;ø
+      this.got = outcome;
     },
     test: function(operation, expectation, outcome) {
       var test = new this.Value(operation, expectation, outcome);
@@ -86,13 +86,24 @@ var MENU = function() {
         break;
     }
   };
+  
+  
+////////////////////////////////////////////////////////////  
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////  
+////////////////////////////////////////////////////////////  
+////////////////////////////////////////////////////////////  
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////  
+////////////////////////////////////////////////////////////
+  
   var obj = {
     ViewportButton: function(name, id) {
       this.name = name;
       this.id = id;
       this.viewport = id + '_vp';
       this.expand = function() { 
-        return $(this.id).prop('checked'); }
+        return $(this.id).prop('checked'); };
       this.get_max_height = function() {
         var totalHeight = 0;
         $(this.viewport).children().each(function() {
@@ -201,7 +212,7 @@ var MENU = function() {
     
     for(var i=0; i<sort.num; i++) {
       var id_index = [];
-      var id_count = sort.units[i].child_count + 1;
+      var id_count = sort.units[i].child_count + 1; // +1 parent
       
       var section_id = sort.units[i].parent.id;
       id_index.push(section_id);
@@ -243,11 +254,61 @@ var MENU = function() {
     test(['end'], ['index(sort)']); 
     test(['result_out'], ['unit_control']);
     
-//     console.log(unit_control['#products_main']);
-//     console.log(unit_control['#solutions_main']);
+    
+//     var formula = function(n,h,r,c) {
+//       var height = n * h;
+//       var ratio = r;
+//       var constant = c;
+      
+//       return height/ratio * 0.01 + c;
+//     };
+    
+//     var nums = [2,3,4,5,6,7];
+//     var heights = [20,25,30,35,40,45];
+//     var ratios = [ 9, 12, 15, 18, 21, 24 ];
+//     var constants = [ 0.08, 0.1, 0.12, 0.14, 0.16, 0.18];
+    
+    
+//     var results = [];
+    
+//     for(var y=0; y<6; y++) {
+//       for(var t=0; t<6; t++) {
+//         console.log('Height: '+(nums[y]*heights[y])+'\n'+
+//                     'Ratio: '+ratios[t]+'\t'+
+//                     'Constant: '+constants[t]+'\n'+
+//                     'Result: '+formula(nums[y],heights[y],ratios[t],constants[t])); 
+//         results.push({ 
+//           height: nums[y]*heights[y],
+//           ratio: ratios[t],
+//           constant: constants[t], 
+//           result:formula(nums[y],heights[y],ratios[t],constants[t]) 
+//         });
+//       }
+//       console.table(results);
+//       results = [];
+//     }
+//      console.log("+++++++++++++++++++++++++++++++");
+//      for(var y=0; y<6; y++) {
+//       for(var t=0; t<6; t++) {
+//         console.log('Height: '+(nums[t]*heights[t])+'\n'+
+//                     'Ratio: '+ratios[y]+'\t'+
+//                     'Constant: '+constants[y]+'\n'+
+//                     'Result: '+formula(nums[t],heights[t],ratios[y],constants[y])); 
+//         results.push({ 
+//           height: nums[t]*heights[t],
+//           ratio: ratios[y],
+//           constant: constants[y], 
+//           result:formula(nums[t],heights[t],ratios[y],constants[y]) 
+//         });
+//       }
+//       console.table(results);
+//       results = [];
+//     }
+    
     
     return unit_control;
   };
+  
   var assemble = construct(obj,data);
   return index(assemble);
   
@@ -259,78 +320,44 @@ var MENU = function() {
 /********************************/
 /********************************/
 
-var menu = new MENU();
 
-$(document).ready(function() {
+var menu = new MENU();
+var checked;
+
+
 ////////////////////////////////////////////////////////////  
-  $('input.sub + label').click(function(event) {
-    var sub_input = '#'+$(this).prev(':input').attr('id');
-    console.log('______________________________________');
-    console.log("[$('input.sub + label').click(function(event)]: entered");
-    console.log('\t'+'target = '+sub_input);
-    console.log('______________________________________');
-    
-    if($(sub_input).prop('checked')) {
-      console.log(sub_input+' is now unchecked');
-      $(sub_input).prop('checked',false);
+$(document).ready(function() {//////////////////////////////
+
+  $('input.sub + label').mouseup(function(event) {    
+
+    var sub_clean = $(this).prev(':input').attr('id');
+    var sub_input = '#'+sub_clean; 
+
+    $(sub_input).click();
+  
+    if($('input[name="subsection"]:checked').length > 1) {
+      var check_arr = $('input[name="subsection"]:checked').not(sub_input).toArray();
+      for(var i=0; i< menu[sub_input].child_count; i++) {
+        var uncheck = menu[sub_input].children[i].id; 
+        if(uncheck != sub_input && $(uncheck).prop('checked') === true) {
+          $(uncheck).click();
+          menu[uncheck].recalc_child(uncheck);
+        } 
+      }
     }
-    else {
-      console.log(sub_input+' is now checked');
-      $(sub_input).prop('checked',true);
-      $("input[name='subsection']").not(sub_input).prop('checked', false);   
-    }
-    
     menu[sub_input].recalc_child(sub_input);
-    
-    
-    //menu['#'+event.target.id].recalc();
-    console.log('child: ' + event.target + '\t' + 'input: ' + sub_input);
-    console.log('______________________________________');
-    console.log("[$('input.sub + label').click(function(event)]: exited");
-    console.log('______________________________________');
-    
+
     $(sub_input+' + label + div.viewport').on('transitionend', function(event) {
-      event.stopPropagation();
-      
-      console.log("[$(sub_input+' + label + div.viewport').on('transitionend', function(event)]: called ");
-      
-      console.log(event.originalEvent.propertyName);
-      
       var sub_input_after = '#'+$(this).prev().prev(':input').attr('id');
       menu[sub_input_after].recalc_parent();
     });
     
   });
   
-//   $('div.viewport').on('transitionend', function(event) {
-//     console.log("[$('div.viewport').on('transitionend', function(event)]: called ");
-//     var sub_input_after = '#'+$(this).prev().prev(':input').attr('id');
-//     menu[sub_input_after].recalc_parent();
-//   });
-  
-  
-  
-  
   $('input.sec').click(function(event) {
     var sec_input = '#'+event.target.id;
-    console.log('______________________________________');
-    console.log("[$('input.sec').click(function(event)]: entered");
-    console.log('\t'+'target = #'+event.target.id);
-    console.log('______________________________________');
-    
-    $("input[name='section']").not(sec_input).prop('checked', false);   
     menu[sec_input].recalc_parent();
-    
-    
-    console.log('______________________________________');
-    console.log("[$('input.sec').click(function(event)]: exited");
-    console.log('______________________________________');
   });
-////////////////////////////////////////////////////////////
-});
 
-
-
-
-
-// put in 'on page load' structure
+});////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////

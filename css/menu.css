@@ -14,13 +14,52 @@
    margin: 0;
    min-height: 100vh;
    font-size: 62.5%;
-   font-size: 102.5%;
    letter-spacing: .1113ch;
-   line-height: 1;
+   line-height: 1.5;
    text-rendering: optimizeLegibility;
+   
+   background-color: rgb(80,80,90);
  }
  body * {
  }
+
+
+
+
+
+
+
+ /*************************************
+                Font Size
+*************************************/
+
+input[type="checkbox"][class*="def"][class*="sec"] + label > span {
+  font-size: 1.1em;
+  padding: .25em 0 .5em 0;
+  font-family: 'Roboto-Medium';
+}
+input[type="checkbox"][class*="def"][class*="sub"]  + label > span {
+  font-size: .75em;
+  line-height: 1;
+  font-weight: 700;
+  font-family: 'Roboto-Light';
+}
+input[type="checkbox"][class*="def"][class*="link"]  + label > span {
+  font-size: .6em;
+  font-weight: 100;
+  line-height: 0;
+  vertical-align: middle;
+  padding-top: .05em;
+  text-shadow: 0 .01em .01em rgba(255,255,255,1);
+  font-family: 'Roboto-Thin';
+}
+
+
+
+
+
+
+
  /*************************************
                 Default
 *************************************/
@@ -32,27 +71,28 @@
    box-sizing: border-box;
    width: 100%;
    text-align: center;
+   font-family: 'Roboto-Medium';
  }
  input[type="checkbox"][class*="def"] + label > span {
    display: inline-block;
    -webkit-user-select: none;
    padding: 1em 0;
-   font-size: 1.125em;
+   font-size: 1em;
    letter-spacing: .1895ch;
-   font-family: 'Roboto', Helvetica, san-serif;
+   font-family: 'Roboto-Light';
  }
  /************************************
                 Section
 *************************************/
  input[type="checkbox"][class*="def"][class*="sec"] + label {
    text-align: left;
-   padding-left: 15%;
+   padding-left: 7.5%;
    background-color: rgba(58, 55, 70, 1);
  }
  input[type="checkbox"][class*="def"][class*="sec"] + label:hover {
  }
  input[type="checkbox"][class*="def"][class*="sec"] + label > span {
-   font-size: 1.27859em;
+/*     font-size: 1.5em; */
    font-weight: 500;
  }
  input[type="checkbox"][class*="def"][class*="sec"] + label:hover > span {
@@ -91,8 +131,7 @@ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] {
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li > div[class*="viewport"] {
    overflow: hidden;
    max-height: 0;
-   transition: max-height .35s ease-in;
-   transition-delay: .15s;
+   transition: max-height .25s ease-in;
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul,
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > 
@@ -129,7 +168,7 @@ li > div[class*="viewport"] > ul {
  }
  input[type="checkbox"][class*="def"][class*="sec"]:checked + label > span {
    color: rgb(200, 200, 200);
-   font-size: 1.27659em;
+/*    font-size: 1.017859em; */
    transition: color .35s ease-out;
  }
  input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] + span {
@@ -148,7 +187,7 @@ li > div[class*="viewport"] > ul {
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label {
    text-align: left;
-   padding-left: 15%;
+   padding-left: 7.5%;
    box-sizing: border-box;
    background-color: rgb(200, 200, 200);
    box-shadow: inset 0 -.15em 0 0 rgba(72, 72, 72, .5);
@@ -184,7 +223,7 @@ li > div[class*="viewport"] > ul {
 } */
  /* ^^^ */
  input[type="checkbox"][class*="def"][class*="sub"] + label > span {
-   padding: .678375em 0;
+   padding: .378375em 0;
    color: rgba(245, 235, 235, 1);
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span {
@@ -255,3 +294,111 @@ input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewpor
    transition: transform .5s ease;
    transition-delay: .15s;
  }
+
+
+ /************************************
+                Links
+*************************************/
+input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul > li >
+input[type="checkbox"][class*="def"][class*="link"] + label {
+  text-align: left;
+  padding-left: 14%;
+  background-color: rgb(233,32,89); 
+  vertical-align: top;
+  border-right: 0.1em solid rgba(0,0,0,0.4);
+  border-bottom: 0.1em solid rgba(0,0,0,0.4);
+  border-top: .1em solid rgba(0,0,0,0.3);
+
+  box-shadow: inset 0  -0.25em 0 .05em rgba(125,15,48,.6);
+} 
+input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul > li:nth-child(odd) >
+input[type="checkbox"][class*="def"][class*="link"] + label {
+/*   border-left: 0.075em solid rgba(245, 235, 235, 1); */
+}
+ input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul > li:nth-child(even) >
+input[type="checkbox"][class*="def"][class*="link"] + label {
+  border-right: none;
+} 
+input[type="checkbox"][class*="def"][class*="link"] + label > span {
+/*   font-size: .7em; */
+  letter-spacing: 0.2495ch;
+
+
+
+  
+  color: rgba(245, 235, 235, 1); /* menu_colors.css */
+  white-space: nowrap;
+}
+input[type="checkbox"][class*="def"][class*="link"] + label:hover {} 
+input[type="checkbox"][class*="def"][class*="link"] + label:hover > span {}
+input[type="checkbox"][class*="def"][class*="link"] + label:active {} 
+input[type="checkbox"][class*="def"][class*="link"] + label:active > span {}
+/************************************
+            UL/LI for Links
+*************************************/
+input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li >
+input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul {
+  padding-bottom: .15em;
+  width: 100%;
+  margin-left: .15%;
+  
+}
+
+
+input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul > li {
+/*   background-color: rgb(233,32,89); */
+  display: inline-block;
+  box-sizing: border-box;
+  width: 49%;
+  
+  vertical-align: top;
+/*   border-right: 0.075em solid rgba(245, 235, 235, 1);
+  border-bottom: 0.075em solid rgba(245, 235, 235, 1);
+
+  box-shadow: inset -0.15em  -0.3em 0 .05em rgba(125,15,48,.75); */
+  margin-left: 1%;
+  clear: both;
+  float: left;
+
+  
+}
+
+input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul > li:nth-child(even) {
+/*   box-shadow: inset 0.2em  -0.3em 0 .05em rgba(125,15,48,.75); */
+  border-right: none;
+/*   border-left: 0.075em solid rgba(245, 235, 235, 1); */
+  margin-left: 0;
+  float: none;
+  clear: left;
+ 
+} 
+
+#boss {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
