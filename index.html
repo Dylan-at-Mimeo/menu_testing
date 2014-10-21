@@ -9,186 +9,485 @@
   <title>MENU</title>
   
   <link rel="stylesheet" href="fontface.css">
+  <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+  
   <link rel="stylesheet" href="css/menu.css">
   <link rel="stylesheet" href="css/menu_colors.css">
-  
 
 </head>
 
 
 <body>
-  
-  
-  <div id="boss">
-    <input type="checkbox" id="products_main" 
-           name="section"  class="def sec">
-    <label for="products_main"> 
-      <span>Products</span>
-    </label>
-    <div class="viewport" id="products_main_vp">
-      <ul>
-        <li>
-          <input type="checkbox"   id="prod_our" 
-                 name="subsection" class="def sub">
-          <label for="products_our">
-            <span>Our Products</span>
-          </label>
-          <div class="viewport" id="prod_our_vp">
-            <ul>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Presentation</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Manual</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Brochure</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Booklet</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Poster</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Newsletter</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Catalog</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Flyer</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Postcard</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Proposal</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <input type="checkbox" id="prod_bind" 
-                 name="subsection" class="def sub">
-          <label for="products_bind">
-            <span>Binding Products</span>
-          </label>
-          <div class="viewport" id="prod_bind_vp">
-            <ul>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Spiral</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Twin Loop</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Comb</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>3-Ring</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Tape</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Velo</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Saddle Stitch</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Perfect</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </li>
-        <li>
-          <input type="checkbox" id="prod_serv" 
-                 name="subsection" class="def sub">
-          <label for="products_serv">
-            <span>Services</span>
-          </label>
-          <div class="viewport" id="prod_serv_vp">
-            <ul>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>Kitting</span>
-                </label>
-              </li>
-              <li>
-                <input type="checkbox" id="" name="link" class="def link">
-                <label for="">
-                  <span>CD/DVD/USB</span>
-                </label>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <span></span>
+
+
+  <div id="responsive_menu">
+    
+    <ul class="account_links">
+      <li><span>LOGIN</span></li>
+      <li><span>SIGN-UP</span></li>
+    </ul>
+
+    <ul id="mimeoAccordion" class="sections">
+      <li>
+        <input type="checkbox" id="products_main" name="section" class="def sec">
+        <label for="products_main">
+          <span>Products</span>
+        </label>
+        <div class="viewport" id="products_main_vp">
+          <ul>
+            <li>
+              <input type="checkbox" id="prod_our" name="subsection" class="def sub">
+              <label for="products_our">
+                <span>Our Products</span>
+              </label>
+              <div class="viewport" id="prod_our_vp">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Presentation</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Manual</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Brochure</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Booklet</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Poster</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Newsletter</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Catalog</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Flyer</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Postcard</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Proposal</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" id="prod_bind" name="subsection" class="def sub">
+              <label for="products_bind">
+                <span>Binding Products</span>
+              </label>
+              <div class="viewport" id="prod_bind_vp">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Spiral</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Twin Loop</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Comb</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>3-Ring</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Tape</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Velo</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Saddle Stitch</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Perfect</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" id="prod_serv" name="subsection" class="def sub">
+              <label for="products_serv">
+                <span>Services</span>
+              </label>
+              <div class="viewport" id="prod_serv_vp">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Kitting</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>CD/DVD/USB</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <span></span>
+      </li>
+      <li>
+        <input type="checkbox" id="solutions_main" name="section" class="def sec">
+        <label for="solutions_main">
+          <span>Solutions</span>
+        </label>
+        <div class="viewport" id="solutions_main_vp">
+          <ul>
+            <li>
+              <input type="checkbox" id="solu_bus" name="subsection" class="def sub">
+              <label for="solutions_bus">
+                <span>Business</span>
+              </label>
+              <div class="viewport" id="solu_bus_vp">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Training</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Learning</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>IT Solutions</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Purchasing</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Sales</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Marketing</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Event</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Customization</span>
+                    </label>
+                  </li>
+                 
+                </ul>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" id="solu_ind" name="subsection" class="def sub">
+              <label for="solutions_ind">
+                <span>Industry</span>
+              </label>
+              <div class="viewport" id="solu_ind_vp">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Technology</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Franchise</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Financial</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Manufacturing</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Pharmaceutical</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Education</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Real Estate</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Legal</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+        <span></span>
+      </li>
+      <li>
+        <input type="checkbox" id="marketplace_main" name="section" class="def sec">
+        <label for="marketplace_main">
+          <span>Marketplace</span>
+        </label>
+        <div class="viewport" id="marketplace_main_vp">
+          <ul>
+            <li>
+              <input type="checkbox" id="mark_con" name="subsection" class="def sub">
+              <label for="mark_con">
+                <span>Content</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="mark_dis" name="subsection" class="def sub">
+              <label for="mark_dis">
+                <span>Distribution</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="mark_dis" name="subsection" class="def sub">
+              <label for="mark_dis">
+                <span>Packages</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="mark_ben" name="subsection" class="def sub">
+              <label for="mark_ben">
+                <span>Benefits</span>
+              </label>
+            </li>
+            
+          </ul>
+        </div>
+        <span></span>
+      </li>
+      <li>
+        <input type="checkbox" id="support_main" name="section" class="def sec">
+        <label for="support_main">
+          <span>Support</span>
+        </label>
+        <div class="viewport" id="support_main_vp">
+          <ul>
+            <li>
+              <input type="checkbox" id="supp_res" name="subsection" class="def sub">
+              <label for="support_res">
+                <span>Resources</span>
+              </label>
+              <div class="viewport" id="supp_res_vp">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Case Studies</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Videos</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Mimeo Printer</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Forms</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>File Formats</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Templates</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Our Guides</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Mimeo Connect</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Locations</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Partners</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <input type="checkbox" id="supp_cap" name="subsection" class="def sub">
+              <label for="support_cap">
+                <span>Capabilities</span>
+              </label>
+              <div class="viewport" id="supp_cap_vp">
+                <ul>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Print</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Security</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Distribute</span>
+                    </label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="" name="link" class="def link">
+                    <label for="">
+                      <span>Sustainability</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            
+          </ul>
+        </div>
+        <span></span>
+      </li>
+
+    </ul>
+    <ul id="bot_icons">
+      <li class="fa fa-flag"></li>
+      <li class="fa fa-flag"></li>
+      <li class="fa fa-phone"></li>
+      <li class="fa fa-envelope"></li>
+      <li class="search_slider">
+        <input type="search" class="respon_menu_search">
+      </li>
+    </ul>
+        
   </div>
-  
+
   <script src="bower_components/jQuery/dist/jquery.js"></script>
   <script src="js/jquery/menu_redux_2.js"></script>
   <script src="js/font_resize.js"></script>
- 
+
 </body>
 
 </html>

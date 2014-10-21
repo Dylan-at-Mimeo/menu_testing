@@ -85,3 +85,52 @@
 	font-style: normal;
 }
 
+
+
+
+
+
+
+
+
+
+/* OPEN SANS */
+
+@font-face { 
+  font-family: 'OpenSans_Light';
+  font-weight: normal;
+  font-style: normal;
+  src: url('font/Open_Sans/OpenSans-Light.ttf') format('truetype');
+}
+
+
+@font-face { 
+  font-family: 'OpenSans_Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url('font/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+
+@font-face { 
+  font-family: 'OpenSans_Semibold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('font/Open_Sans/OpenSans-Semibold.ttf') format('truetype');
+}
+
+
+@font-face { 
+  font-family: 'OpenSans_Bold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('font/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+}
+
+
+@font-face { 
+  font-family: 'OpenSans_ExtraBold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('font/Open_Sans/OpenSans-ExtraBold.ttf') format('truetype');
+}

@@ -124,7 +124,6 @@ var MENU = function() {
       this.set_vp = function() { 
         $(this.viewport).css("max-height",this.height());
         $(this.viewport).css("transition","max-height "+this.trans_speed+" ease-in-out");
-        console.log(this.trans_speed);
       };
     }, // ViewportButton
     /********************************/
@@ -164,7 +163,12 @@ var MENU = function() {
         'Business': '#solu_bus',
         'Industry': '#solu_ind'
       },
-      'Marketplace': null,
+      'Marketplace': {
+        'Content': '#mark_con',
+        'Distribution': '#mark_dis',
+        'Packages': '#mark_pac',
+        'Benefits': '#mark_ben'
+      },
       'Support': {
         'Resources': '#supp_res',
         'Capabilities': '#supp_cap'
@@ -286,37 +290,74 @@ var checked;
 
 ////////////////////////////////////////////////////////////  
 $(document).ready(function() {//////////////////////////////
-
-  $('input.sub + label').mouseup(function(event) {    
-
+  
+  
+  
+  $('input.sub + label').mouseup(function(event) {  
     var sub_clean = $(this).prev(':input').attr('id');
     var sub_input = '#'+sub_clean; 
-
     $(sub_input).click();
-  
+  });
+
+  $('input[name="subsection"]').change(function(event) {    
+    var sub_clean = $(this).attr('id');
+    var sub_input = '#'+sub_clean; 
+    console.log(sub_input);
+    //$(sub_input).click();
+    menu[sub_input].recalc_child(sub_input);
     if($('input[name="subsection"]:checked').length > 1) {
+      console.log('over limit'); 
       var check_arr = $('input[name="subsection"]:checked').not(sub_input).toArray();
       for(var i=0; i< menu[sub_input].child_count; i++) {
         var uncheck = menu[sub_input].children[i].id; 
-        if(uncheck != sub_input && $(uncheck).prop('checked') === true) {
+        if($(uncheck).prop('checked') === true) {
+          console.log('(uncheck) = '+uncheck);
+          console.log('(sub_input) = '+sub_input);
           $(uncheck).click();
           menu[uncheck].recalc_child(uncheck);
+          //$(sub_input).click();
+          //menu[sub_input].recalc_child(sub_input);
         } 
       }
     }
-    menu[sub_input].recalc_child(sub_input);
+    
 
     $(sub_input+' + label + div.viewport').on('transitionend', function(event) {
       var sub_input_after = '#'+$(this).prev().prev(':input').attr('id');
+      console.log('sub_input_after = '+sub_input_after);
       menu[sub_input_after].recalc_parent();
+      
+      
     });
     
   });
   
   $('input.sec').click(function(event) {
     var sec_input = '#'+event.target.id;
+    
+    if($(sec_input).prop('checked') === true) {
+      $('input.sec ~ div.viewport > ul > li > input.sub:checked').click();
+    }
+    
     menu[sec_input].recalc_parent();
+    
+    if($('input.sec:checked').not(sec_input).length > 0) {
+      console.log('section overflow');
+      $('input.sec:checked').not(sec_input).click();
+      $(sec_input).click();
+    }
+    
+    
+    
   });
 
+//   $('ul.sections').css({
+//     'position': 'absolute',
+//     'left': '50%',
+//     'top': '50%',
+//     'margin-left': $(this).outerWidth(true)/2 * -1,
+//     'margin-top': $(this).outerHeight(true)/2 * -1
+//   });
+  
 });////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
