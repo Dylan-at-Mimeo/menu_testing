@@ -7,6 +7,7 @@
     Purpose of the stylesheet follows. 
     To change this template use Tools | Templates.
 */
+
  root {
    display: block;
  }
@@ -22,12 +23,6 @@
  }
  body * {
  }
-
-
-
-
-
-
 
  /*************************************
                 Font Size
@@ -114,8 +109,8 @@ input[type="checkbox"][class*="def"][class*="link"]  + label > span {
 input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] {
    overflow: hidden;
    max-height: 0;
-   transition: max-height .35s ease-in;
-   transition-delay: .15s;
+/*    transition: max-height .35s ease-in;
+   transition-delay: .15s; */
  }
 /* 
  input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] {
@@ -125,13 +120,13 @@ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] {
  }
  */
  input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] {
-   transition: max-height .5s ease-out;
-   transition-delay: .15s;
+/*    transition: max-height .5s ease-out;
+   transition-delay: .15s; */
  } 
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li > div[class*="viewport"] {
    overflow: hidden;
    max-height: 0;
-   transition: max-height .25s ease-in;
+/*    transition: max-height .25s ease-in; */
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul,
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > 

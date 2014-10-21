@@ -1110,6 +1110,7 @@ if(function(global, factory) {
         }),
         lang: markFunction(function(lang) {
           return ridentifier.test(lang || "") || Sizzle.error("unsupported lang: " + lang), lang = lang.replace(runescape, funescape).toLowerCase(),
+
           function(elem) {
             var elemLang;
             do
@@ -2356,6 +2357,7 @@ if(function(global, factory) {
       }
     })
   },
+
   function() {
     var input = document.createElement("input"),
       select = document.createElement("select"),
@@ -3741,6 +3743,7 @@ if(function(global, factory) {
     })
   })
 }(jQuery),
+
 function(window, $) {
   var Superslides, plugin = "superslides";
   Superslides = function(el, options) {
@@ -4058,6 +4061,7 @@ function(window, $) {
     }), result
   }, $.fn[plugin].fx = {}
 }(this, jQuery),
+
 function($, window, document, undefined) {
   function Plugin(element, options) {
     this.element = element, this.options = $.extend({}, defaults, options), this._defaults = defaults, this._name = pluginName, this.init()
@@ -4145,6 +4149,7 @@ function($, window, document, undefined) {
           break
         }
       return "WebkitOpacity" in style && (prefix = "Webkit"), "KhtmlOpacity" in style && (prefix = "Khtml"),
+
       function(property) {
         return prefix + (prefix.length > 0 ? property.charAt(0).toUpperCase() + property.slice(1) : property)
       }
@@ -4354,6 +4359,7 @@ function($, window, document, undefined) {
     return $window.stellar.apply($window, Array.prototype.slice.call(arguments, 0))
   }, $[pluginName].scrollProperty = scrollProperty, $[pluginName].positionProperty = positionProperty, window.Stellar = Plugin
 }(jQuery, this, document),
+
 function($) {
   var defaults = {
     topSpacing: 0,
@@ -4424,6 +4430,7 @@ function($) {
     setTimeout(scroller, 0)
   })
 }(jQuery),
+
 function(window) {
   function noop() {}
 
@@ -4467,6 +4474,7 @@ function(window) {
   var slice = Array.prototype.slice;
   "function" == typeof define && define.amd ? define("jquery-bridget/jquery.bridget", ["jquery"], defineBridget) : defineBridget(window.jQuery)
 }(window),
+
 function(window) {
   function getIEEvent(obj) {
     var event = window.event;
@@ -4502,6 +4510,7 @@ function(window) {
   };
   "function" == typeof define && define.amd ? define("eventie/eventie", eventie) : "object" == typeof exports ? module.exports = eventie : window.eventie = eventie
 }(this),
+
 function(window) {
   function docReady(fn) {
     "function" == typeof fn && (docReady.isReady ? fn() : queue.push(fn))
@@ -4525,6 +4534,7 @@ function(window) {
     queue = [];
   docReady.isReady = !1, "function" == typeof define && define.amd ? (docReady.isReady = "function" == typeof requirejs, define("doc-ready/doc-ready", ["eventie/eventie"], defineDocReady)) : window.docReady = defineDocReady(window.eventie)
 }(this),
+
 function() {
   function EventEmitter() {}
 
@@ -4619,6 +4629,7 @@ function() {
     return EventEmitter
   }) : "object" == typeof module && module.exports ? module.exports = EventEmitter : this.EventEmitter = EventEmitter
 }.call(this),
+
 function(window) {
   function getStyleProperty(propName) {
     if(propName) {
@@ -4634,6 +4645,7 @@ function(window) {
     return getStyleProperty
   }) : "object" == typeof exports ? module.exports = getStyleProperty : window.getStyleProperty = getStyleProperty
 }(window),
+
 function(window) {
   function getStyleSize(value) {
     var num = parseFloat(value),
@@ -4712,6 +4724,7 @@ function(window) {
     }, measurements = ["paddingLeft", "paddingRight", "paddingTop", "paddingBottom", "marginLeft", "marginRight", "marginTop", "marginBottom", "borderLeftWidth", "borderRightWidth", "borderTopWidth", "borderBottomWidth"];
   "function" == typeof define && define.amd ? define("get-size/get-size", ["get-style-property/get-style-property"], defineGetSize) : "object" == typeof exports ? module.exports = defineGetSize(require("get-style-property")) : window.getSize = defineGetSize(window.getStyleProperty)
 }(window),
+
 function(global, ElemProto) {
   function match(elem, selector) {
     return elem[matchesMethod](selector)
@@ -4751,6 +4764,7 @@ function(global, ElemProto) {
     return matchesSelector
   }) : window.matchesSelector = matchesSelector
 }(this, Element.prototype),
+
 function(window) {
   function extend(a, b) {
     for(var prop in b) a[prop] = b[prop];
@@ -4965,6 +4979,7 @@ function(window) {
     };
   "function" == typeof define && define.amd ? define("outlayer/item", ["eventEmitter/EventEmitter", "get-size/get-size", "get-style-property/get-style-property"], outlayerItemDefinition) : (window.Outlayer = {}, window.Outlayer.Item = outlayerItemDefinition(window.EventEmitter, window.getSize, window.getStyleProperty))
 }(window),
+
 function(window) {
   function extend(a, b) {
     for(var prop in b) a[prop] = b[prop];
@@ -5284,6 +5299,7 @@ function(window) {
     };
   "function" == typeof define && define.amd ? define("outlayer/outlayer", ["eventie/eventie", "doc-ready/doc-ready", "eventEmitter/EventEmitter", "get-size/get-size", "matches-selector/matches-selector", "./item"], outlayerDefinition) : window.Outlayer = outlayerDefinition(window.eventie, window.docReady, window.EventEmitter, window.getSize, window.matchesSelector, window.Outlayer.Item)
 }(window),
+
 function(window) {
   function itemDefinition(Outlayer) {
     function Item() {
@@ -5305,6 +5321,7 @@ function(window) {
   }
   "function" == typeof define && define.amd ? define("isotope/js/item", ["outlayer/outlayer"], itemDefinition) : (window.Isotope = window.Isotope || {}, window.Isotope.Item = itemDefinition(window.Outlayer))
 }(window),
+
 function(window) {
   function layoutModeDefinition(getSize, Outlayer) {
     function LayoutMode(isotope) {
@@ -5353,6 +5370,7 @@ function(window) {
   }
   "function" == typeof define && define.amd ? define("isotope/js/layout-mode", ["get-size/get-size", "outlayer/outlayer"], layoutModeDefinition) : (window.Isotope = window.Isotope || {}, window.Isotope.LayoutMode = layoutModeDefinition(window.getSize, window.Outlayer))
 }(window),
+
 function(window) {
   function masonryDefinition(Outlayer, getSize) {
     var Masonry = Outlayer.create("masonry");
@@ -5425,6 +5443,7 @@ function(window) {
     };
   "function" == typeof define && define.amd ? define("masonry/masonry", ["outlayer/outlayer", "get-size/get-size"], masonryDefinition) : window.Masonry = masonryDefinition(window.Outlayer, window.getSize)
 }(window),
+
 function(window) {
   function extend(a, b) {
     for(var prop in b) a[prop] = b[prop];
@@ -5448,6 +5467,7 @@ function(window) {
   }
   "function" == typeof define && define.amd ? define("isotope/js/layout-modes/masonry", ["../layout-mode", "masonry/masonry"], masonryDefinition) : masonryDefinition(window.Isotope.LayoutMode, window.Masonry)
 }(window),
+
 function(window) {
   function fitRowsDefinition(LayoutMode) {
     var FitRows = LayoutMode.create("fitRows");
@@ -5468,6 +5488,7 @@ function(window) {
   }
   "function" == typeof define && define.amd ? define("isotope/js/layout-modes/fit-rows", ["../layout-mode"], fitRowsDefinition) : fitRowsDefinition(window.Isotope.LayoutMode)
 }(window),
+
 function(window) {
   function verticalDefinition(LayoutMode) {
     var Vertical = LayoutMode.create("vertical", {
@@ -5491,6 +5512,7 @@ function(window) {
   }
   "function" == typeof define && define.amd ? define("isotope/js/layout-modes/vertical", ["../layout-mode"], verticalDefinition) : verticalDefinition(window.Isotope.LayoutMode)
 }(window),
+
 function(window) {
   function extend(a, b) {
     for(var prop in b) a[prop] = b[prop];
@@ -5723,6 +5745,7 @@ function(window) {
     };
   "function" == typeof define && define.amd ? define(["outlayer/outlayer", "get-size/get-size", "matches-selector/matches-selector", "isotope/js/item", "isotope/js/layout-mode", "isotope/js/layout-modes/masonry", "isotope/js/layout-modes/fit-rows", "isotope/js/layout-modes/vertical"], isotopeDefinition) : window.Isotope = isotopeDefinition(window.Outlayer, window.getSize, window.matchesSelector, window.Isotope.Item, window.Isotope.LayoutMode)
 }(window),
+
 function() {
   function EventEmitter() {}
 
@@ -5817,6 +5840,7 @@ function() {
     return EventEmitter
   }) : "object" == typeof module && module.exports ? module.exports = EventEmitter : this.EventEmitter = EventEmitter
 }.call(this),
+
 function(window) {
   function getIEEvent(obj) {
     var event = window.event;
@@ -5852,6 +5876,7 @@ function(window) {
   };
   "function" == typeof define && define.amd ? define("eventie/eventie", eventie) : window.eventie = eventie
 }(this),
+
 function(window, factory) {
   "function" == typeof define && define.amd ? define(["eventEmitter/EventEmitter", "eventie/eventie"], function(EventEmitter, eventie) {
     return factory(window, EventEmitter, eventie)
@@ -5969,6 +5994,7 @@ function(window, factory) {
     eventie.unbind(event.target, "load", this), eventie.unbind(event.target, "error", this)
   }, ImagesLoaded
 }),
+
 function() {
   var Util, WeakMap, __bind = function(fn, me) {
       return function() {

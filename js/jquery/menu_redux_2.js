@@ -98,9 +98,10 @@ var MENU = function() {
 ////////////////////////////////////////////////////////////
   
   var obj = {
-    ViewportButton: function(name, id) {
+    ViewportButton: function(name, id, isParent) {
       this.name = name;
       this.id = id;
+      this.parent = isParent;
       this.viewport = id + '_vp';
       this.expand = function() { 
         return $(this.id).prop('checked'); };
@@ -114,8 +115,17 @@ var MENU = function() {
       this.max_height = this.get_max_height();
       this.height = function() { 
         return this.expand() ? this.get_max_height() : 0; };
+      this.get_trans_speed = function() {
+        var height = this.max_height.substr(0,this.max_height.length-2);
+        var constant = this.parent ? 0.3 : 0.1;
+        return constant + height/300 + 's';
+      };
+      this.trans_speed = this.get_trans_speed();
       this.set_vp = function() { 
-        $(this.viewport).css("max-height",this.height()); };
+        $(this.viewport).css("max-height",this.height());
+        $(this.viewport).css("transition","max-height "+this.trans_speed+" ease-in-out");
+        console.log(this.trans_speed);
+      };
     }, // ViewportButton
     /********************************/
     SectionUnit: function(parent, children, child_count) {
@@ -175,13 +185,13 @@ var MENU = function() {
       var subsec_count = 0;
       var section;
       if(data.section.hasOwnProperty(sec)) { // ignore prototype
-        section = new obj.ViewportButton(sec, data.section[sec]);
+        section = new obj.ViewportButton(sec, data.section[sec], true);
         sec_count++;
         test(['result_in', section.name + ' (obj)', 'ViewportButton', section]);
       }
       for(var subsec in data.subsection[sec]) {
         if(data.subsection[sec].hasOwnProperty(subsec)) {
-          var subsection = new obj.ViewportButton(subsec, data.subsection[sec][subsec]);
+          var subsection = new obj.ViewportButton(subsec, data.subsection[sec][subsec], false);
           subsecs.push(subsection);
           subsec_count++;
           test(['result_in', subsection.name + ' (obj)', 'ViewportButton', subsection]);
@@ -238,8 +248,8 @@ var MENU = function() {
     test(['result_out'], ['unit_pack']);
     
     var unit_control = {};
-    var unit_control_key_value = function create(access,arg) {
-      unit_control[access] = arg;
+    var unit_control_key_value = function create(key,value) {
+      unit_control[key] = value;
     };
     for(var x=0; x<unit_count; x++) {
       for(var xx=0; xx<unit_index[x].num; xx++) {
@@ -254,58 +264,7 @@ var MENU = function() {
     test(['end'], ['index(sort)']); 
     test(['result_out'], ['unit_control']);
     
-    
-//     var formula = function(n,h,r,c) {
-//       var height = n * h;
-//       var ratio = r;
-//       var constant = c;
-      
-//       return height/ratio * 0.01 + c;
-//     };
-    
-//     var nums = [2,3,4,5,6,7];
-//     var heights = [20,25,30,35,40,45];
-//     var ratios = [ 9, 12, 15, 18, 21, 24 ];
-//     var constants = [ 0.08, 0.1, 0.12, 0.14, 0.16, 0.18];
-    
-    
-//     var results = [];
-    
-//     for(var y=0; y<6; y++) {
-//       for(var t=0; t<6; t++) {
-//         console.log('Height: '+(nums[y]*heights[y])+'\n'+
-//                     'Ratio: '+ratios[t]+'\t'+
-//                     'Constant: '+constants[t]+'\n'+
-//                     'Result: '+formula(nums[y],heights[y],ratios[t],constants[t])); 
-//         results.push({ 
-//           height: nums[y]*heights[y],
-//           ratio: ratios[t],
-//           constant: constants[t], 
-//           result:formula(nums[y],heights[y],ratios[t],constants[t]) 
-//         });
-//       }
-//       console.table(results);
-//       results = [];
-//     }
-//      console.log("+++++++++++++++++++++++++++++++");
-//      for(var y=0; y<6; y++) {
-//       for(var t=0; t<6; t++) {
-//         console.log('Height: '+(nums[t]*heights[t])+'\n'+
-//                     'Ratio: '+ratios[y]+'\t'+
-//                     'Constant: '+constants[y]+'\n'+
-//                     'Result: '+formula(nums[t],heights[t],ratios[y],constants[y])); 
-//         results.push({ 
-//           height: nums[t]*heights[t],
-//           ratio: ratios[y],
-//           constant: constants[y], 
-//           result:formula(nums[t],heights[t],ratios[y],constants[y]) 
-//         });
-//       }
-//       console.table(results);
-//       results = [];
-//     }
-    
-    
+ 
     return unit_control;
   };
   
