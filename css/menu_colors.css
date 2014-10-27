@@ -14,6 +14,7 @@
 
 /*** PRODUCTS ***/
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label {
+  background-image: -webkit-linear-gradient(top, rgba(233,32,89,1) 0%, rgba(233,32,89,1) 50%, rgb(51, 51, 51) 50%, rgb(51, 51, 51) 100%);
   background-image: linear-gradient(to bottom, 
     rgba(233,32,89,1) 0%, rgba(233,32,89,1) 50%, 
    rgb(51, 51, 51) 50%,rgb(51, 51, 51) 100%);
@@ -24,8 +25,11 @@ input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label {
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: 0 solid rgba(245, 235, 235, 1);
 
-  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in-out;
-  transition-delay: .1s;
+  -webkit-transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in-out;
+
+          transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in-out;
+/*   -webkit-transition-delay: .1s;
+          transition-delay: .1s; */
 }
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:hover {
   background-position: 0% 300%;
@@ -33,8 +37,12 @@ input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:h
   border-top: 0 solid rgb(200, 200, 200);
  
   
-  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in;
-  transition-delay: .1s;
+  -webkit-transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in;
+ 
+  
+          transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in;
+/*   -webkit-transition-delay: .1s;
+          transition-delay: .1s; */
 }
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:active {
   background-position: 0% 305%;
@@ -42,8 +50,12 @@ input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:a
   border-top: 0 solid rgb(200, 200, 200);
  
   
-  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in;
-  transition-delay: .1s;
+  -webkit-transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in;
+ 
+  
+          transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .15s ease-in;
+/*   -webkit-transition-delay: .1s;
+          transition-delay: .1s; */
 }
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label {
   background-position: 0% 400%;
@@ -51,8 +63,11 @@ input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked +
   border-bottom: .1em solid rgb(25, 25, 25);
   box-shadow: inset 0 -.215em 0 0em rgba(20, 0, 10, .15);
   
-  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .1s;
+  -webkit-transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+/*   -webkit-transition-delay: .1s;
+          transition-delay: .1s; */
 }
 /****/
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label > span {
@@ -60,7 +75,9 @@ input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label >
   letter-spacing: .1895ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
 
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:hover > span {}
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:active > span {
@@ -68,28 +85,36 @@ input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label:a
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(255, 255, 255, .75);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label > span {
   color:  rgba(233,32,89,1);
   letter-spacing: .1895ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
   
-  transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label:hover > span {
   color:  rgba(233,32,89,1);
   letter-spacing: .2795ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked + label:active > span {
   color:  rgba(233,32,89,1);
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(233,32,89,1);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 /****/ 
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] + label,
@@ -115,14 +140,16 @@ input[type="checkbox"][class*="def"][class*="sub"] + label > span {
   color: rgba(245, 235, 235, 1);
 /*   padding: .478375em 0; */
   letter-spacing: .1895ch;
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /*^^^^^^^^*/
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] 
 ~ div[class="viewport"] > ul > li > 
 input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span  {
   letter-spacing: .2795ch;
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /*^^^^^^^^*/
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked 
@@ -130,18 +157,23 @@ input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked
 input[type="checkbox"][class*="def"][class*="sub"] + label:active > span  {
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(245, 235, 235, 1);
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /****/
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul {
    background-color: rgba(233,32,89,1);
-   transition: background-color 1s ease;
-   transition-delay: .5s;
+   -webkit-transition: background-color 1s ease;
+           transition: background-color 1s ease;
+   -webkit-transition-delay: .5s;
+           transition-delay: .5s;
  }
 input[type="checkbox"][id="products_main"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul {
    background-color: rgba(182, 26, 70,1);
-   transition: background-color 1s ease;
-   transition-delay: .5s;
+   -webkit-transition: background-color 1s ease;
+           transition: background-color 1s ease;
+   -webkit-transition-delay: .5s;
+           transition-delay: .5s;
  }
 /****/
 
@@ -151,20 +183,26 @@ input[type="checkbox"][class*="def"][class*="sec"] + label {
    border-bottom: .0em solid rgba(245, 235, 235, 1);
    background-color: rgba(58, 55, 70, 1);
    box-shadow: inset 0 0 0 0 rgba(20, 0, 10, .15);
-   transition: box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-   transition-delay: .14s;
+   -webkit-transition: box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+           transition: box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+   -webkit-transition-delay: .14s;
+           transition-delay: .14s;
  }
  input[type="checkbox"][class*="def"][class*="sec"]:checked + label:hover > span {
-   transition: color .35s ease-out;
+   -webkit-transition: color .35s ease-out;
+           transition: color .35s ease-out;
  }
  input[type="checkbox"][class*="def"][class*="sec"] + label:active > span {
-   transition: color .35s ease-out;
+   -webkit-transition: color .35s ease-out;
+           transition: color .35s ease-out;
  }
  input[type="checkbox"][class*="def"][class*="sec"]:checked + label:active > span {
-   transition: color .35s ease-out;
+   -webkit-transition: color .35s ease-out;
+           transition: color .35s ease-out;
  }
 input[type="checkbox"][class*="def"][class*="sec"]:checked + label > span {
-   transition: color .35s ease-out;
+   -webkit-transition: color .35s ease-out;
+           transition: color .35s ease-out;
  }
 /****/
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] + span {
@@ -177,15 +215,21 @@ input[type="checkbox"][class*="def"][class*="sec"]:checked + label > span {
    box-shadow: inset 0 .15em 0 0em rgba(20, 0, 10, .15);
    max-height: 0;
    border-top: 0 solid rgba(245, 235, 235, 1);
-   transition: max-height .25s ease-in, border-top .15s ease-in;
-   transition-delay: .1s;
+   border-bottom: 0 solid rgb(56, 56, 56);
+   -webkit-transition: max-height .25s ease-in, border-top .15s ease-in, border-bottom .15s ease-in;
+           transition: max-height .25s ease-in, border-top .15s ease-in, border-bottom .15s ease-in;
+   -webkit-transition-delay: .1s;
+           transition-delay: .1s;
  }
  input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class="viewport"] + span {
    max-height: .75em;
    border-top: .1em solid rgb(25, 25, 25);
+/*    border-bottom: .1em solid rgb(56, 56, 56); */
    box-shadow: inset 0 .15em 0 0em rgba(20, 0, 10, .15);
-   transition: max-height .25s ease-out, border-top .15s ease-out;
-   transition-delay: .05s;
+   -webkit-transition: max-height .25s ease-out, border-top .15s ease-out,  border-bottom .15s ease-out;
+           transition: max-height .25s ease-out, border-top .15s ease-out,  border-bottom .15s ease-out;
+   -webkit-transition-delay: .05s;
+           transition-delay: .05s;
  }
 /****/
 
@@ -214,6 +258,7 @@ input[type="checkbox"][class*="def"][class*="link"] + label {
 
 /*** Solutions ***/
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label {
+  background-image: -webkit-linear-gradient(top, rgba(0,188,240,1) 0%, rgba(0,188,240,1) 50%, rgb(51, 51, 51) 50%, rgb(51, 51, 51) 100%);
   background-image: linear-gradient(to bottom, 
     rgba(0,188,240,1) 0%, rgba(0,188,240,1) 50%, 
    rgb(51, 51, 51) 50%,rgb(51, 51, 51) 100%);
@@ -224,8 +269,11 @@ input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label 
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: 0em solid rgba(245, 235, 235, 1);
 
-  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+
+          transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label:hover {
   background-position: 0% 300%;
@@ -233,8 +281,11 @@ input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label:
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: 0em solid rgba(245, 235, 235, 1);
   
-  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label:active {
   background-position: 0% 305%;
@@ -242,8 +293,11 @@ input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label:
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: .0em solid rgba(245, 235, 235, 1);
   
-  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"]:checked + label {
   background-position: 0% 400%;
@@ -251,8 +305,11 @@ input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"]:checked 
   border-bottom: .1em solid rgb(25, 25, 25);
   box-shadow: inset 0 -.215em 0 0em rgba(20, 0, 10, .15);
   
-  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 /****/
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label > span {
@@ -260,7 +317,9 @@ input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label 
   letter-spacing: .1895ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
 
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label:hover > span {}
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label:active > span {
@@ -268,28 +327,36 @@ input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label:
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(255, 255, 255, .75);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"]:checked + label > span {
   color:  rgba(0,188,240,1);
   letter-spacing: .1895ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
   
-  transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"]:checked + label:hover > span {
   color:  rgba(0,188,240,1) ;
   letter-spacing: .2795ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"]:checked + label:active > span {
   color:  rgba(0,188,240,1);
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(0,188,240,1);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 /****/ 
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] + label,
@@ -315,14 +382,16 @@ input[type="checkbox"][class*="def"][class*="sub"] + label > span {
   color: rgba(245, 235, 235, 1);
   padding: .478375em 0;
   letter-spacing: .1895ch;
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /*^^^^^^^^*/
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] 
 ~ div[class="viewport"] > ul > li > 
 input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span  {
   letter-spacing: .2795ch;
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /*^^^^^^^^*/
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"]:checked 
@@ -330,18 +399,23 @@ input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"]:checked
 input[type="checkbox"][class*="def"][class*="sub"] + label:active > span  {
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(245, 235, 235, 1);
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /****/
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul {
    background-color: rgba(30,88,240,1) ;
-   transition: background-color 1s ease;
-   transition-delay: .5s;
+   -webkit-transition: background-color 1s ease;
+           transition: background-color 1s ease;
+   -webkit-transition-delay: .5s;
+           transition-delay: .5s;
  }
 input[type="checkbox"][id="solutions_main"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul {
    background-color: rgba(46, 90, 172,1);
-   transition: background-color 1s ease;
-   transition-delay: .5s;
+   -webkit-transition: background-color 1s ease;
+           transition: background-color 1s ease;
+   -webkit-transition-delay: .5s;
+           transition-delay: .5s;
  }
 
 /****/
@@ -371,6 +445,7 @@ input[type="checkbox"][class*="def"][class*="link"] + label {
 
 /*** Marketplace ***/
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + label {
+  background-image: -webkit-linear-gradient(top, rgba(154,93,192,1) 0%, rgba(154,93,192,1) 50%, rgb(51, 51, 51) 50%, rgb(51, 51, 51) 100%);
   background-image: linear-gradient(to bottom, 
     rgba(154,93,192,1) 0%, rgba(154,93,192,1) 50%, 
    rgb(51, 51, 51) 50%,rgb(51, 51, 51) 100%);
@@ -381,8 +456,11 @@ input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + labe
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: .0em solid rgba(245, 235, 235, 1);
 
-  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+
+          transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + label:hover {
   background-position: 0% 300%;
@@ -390,8 +468,11 @@ input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + labe
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: .0em solid rgba(245, 235, 235, 1);
   
-  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + label:active {
   background-position: 0% 305%;
@@ -399,8 +480,11 @@ input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + labe
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: .0em solid rgba(245, 235, 235, 1);
   
-  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"]:checked + label {
   background-position: 0% 400%;
@@ -408,8 +492,11 @@ input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"]:checke
   border-bottom: .1em solid rgb(25, 25, 25);
   box-shadow: inset 0 -.215em 0 0em rgba(20, 0, 10, .15);
   
-  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 /****/
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + label > span {
@@ -417,7 +504,9 @@ input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + labe
   letter-spacing: .1895ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
 
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + label:hover > span {}
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + label:active > span {
@@ -425,28 +514,36 @@ input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + labe
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(255, 255, 255, .75);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"]:checked + label > span {
   color:  rgba(154,93,192,1);
   letter-spacing: .1895ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
   
-  transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"]:checked + label:hover > span {
   color:  rgba(154,93,192,1);
   letter-spacing: .2795ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"]:checked + label:active > span {
   color:  rgba(154,93,192,1);
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(154,93,192,1);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 /****/ 
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] + label,
@@ -472,14 +569,16 @@ input[type="checkbox"][class*="def"][class*="sub"] + label > span {
   color: rgba(245, 235, 235, 1);
   padding: .478375em 0;
   letter-spacing: .1895ch;
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /*^^^^^^^^*/
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] 
 ~ div[class="viewport"] > ul > li > 
 input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span  {
   letter-spacing: .2795ch;
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /*^^^^^^^^*/
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"]:checked 
@@ -487,18 +586,23 @@ input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"]:checke
 input[type="checkbox"][class*="def"][class*="sub"] + label:active > span  {
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(245, 235, 235, 1);
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /****/
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul {
    background-color: rgba(154,93,192,1);
-   transition: background-color 1s ease;
-   transition-delay: .5s;
+   -webkit-transition: background-color 1s ease;
+           transition: background-color 1s ease;
+   -webkit-transition-delay: .5s;
+           transition-delay: .5s;
  }
 input[type="checkbox"][id="marketplace_main"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul {
    background-color: rgba(154,93,192,1);
-   transition: background-color 1s ease;
-   transition-delay: .5s;
+   -webkit-transition: background-color 1s ease;
+           transition: background-color 1s ease;
+   -webkit-transition-delay: .5s;
+           transition-delay: .5s;
  }
 
 /****/
@@ -522,6 +626,7 @@ input[type="checkbox"][class*="def"][class*="link"] + label {
 
 /*** Support ***/
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label {
+  background-image: -webkit-linear-gradient(top, rgba(1,202,99,1) 0%, rgba(1,202,99,1) 50%, rgb(51, 51, 51)50%, rgb(51, 51, 51) 100%);
   background-image: linear-gradient(to bottom, 
     rgba(1,202,99,1) 0%, rgba(1,202,99,1) 50%, 
    rgb(51, 51, 51)50%,rgb(51, 51, 51) 100%); 
@@ -532,8 +637,11 @@ input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label {
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: .0em solid rgba(245, 235, 235, 1);
 
-  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+
+          transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label:hover {
   background-position: 0% 300%;
@@ -541,8 +649,11 @@ input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label:ho
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: .0em solid rgba(245, 235, 235, 1);
   
-  transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .5s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label:active {
   background-position: 0% 305%;
@@ -550,8 +661,11 @@ input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label:ac
   border-top: 0 solid rgb(200, 200, 200);
   border-bottom: .0em solid rgba(245, 235, 235, 1);
   
-  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"]:checked + label {
   background-position: 0% 400%;
@@ -559,8 +673,11 @@ input[type="checkbox"][id="support_main"][class*="def"][class*="sec"]:checked + 
   border-bottom: .1em solid rgb(25, 25, 25);
   box-shadow: inset 0 -.215em 0 0em rgba(20, 0, 10, .15);
   
-  transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
-  transition-delay: .14s;
+  -webkit-transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  
+          transition: background-position .75s ease-in-out, box-shadow .35s ease-in, border-top .35s ease-in, border-bottom .35s ease-in;
+  -webkit-transition-delay: .14s;
+          transition-delay: .14s;
 }
 /****/
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label > span {
@@ -568,7 +685,9 @@ input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label > 
   letter-spacing: .1895ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
 
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label:hover > span {}
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label:active > span {
@@ -576,28 +695,36 @@ input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label:ac
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(255, 255, 255, .75);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"]:checked + label > span {
   color:  rgba(1,202,99,1);
   letter-spacing: .1895ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
   
-  transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .025s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"]:checked + label:hover > span {
   color:  rgba(1,202,99,1);
   letter-spacing: .2795ch;
   text-shadow: 0em 0em 0em rgba(255, 255, 255, 0);
   
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"]:checked + label:active > span {
   color:  rgba(1,202,99,1);
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(1,202,99,1);
 
-  transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+  -webkit-transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
+
+          transition: color .35s ease-in-out, letter-spacing .35s ease-in-out, text-shadow .35s ease-in-out;
 }
 /****/ 
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] + label,
@@ -621,14 +748,16 @@ input[type="checkbox"][class*="def"][class*="sub"] + label > span {
   color: rgba(245, 235, 235, 1);
   padding: .478375em 0;
   letter-spacing: .1895ch;
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /*^^^^^^^^*/
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] 
 ~ div[class="viewport"] > ul > li > 
 input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span  {
   letter-spacing: .2795ch;
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /*^^^^^^^^*/
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"]:checked 
@@ -636,18 +765,23 @@ input[type="checkbox"][id="support_main"][class*="def"][class*="sec"]:checked
 input[type="checkbox"][class*="def"][class*="sub"] + label:active > span  {
   letter-spacing: .1895ch;
   text-shadow: .01em .01em .5em rgba(245, 235, 235, 1);
-  transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+  -webkit-transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
+          transition: letter-spacing .25s ease-in-out, text-shadow .25s ease-in-out;
 }
 /****/
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul {
    background-color: rgba(1,202,99,1);
-   transition: background-color 1s ease;
-   transition-delay: .5s;
+   -webkit-transition: background-color 1s ease;
+           transition: background-color 1s ease;
+   -webkit-transition-delay: .5s;
+           transition-delay: .5s;
  }
 input[type="checkbox"][id="support_main"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] > ul {
-   background-color: rgba(1, 122, 60,1);
-   transition: background-color 1s ease;
-   transition-delay: .25s;
+   background-color: rgb(0, 74, 36);
+   -webkit-transition: background-color 1s ease;
+           transition: background-color 1s ease;
+   -webkit-transition-delay: .25s;
+           transition-delay: .25s;
  }
 /****/
 

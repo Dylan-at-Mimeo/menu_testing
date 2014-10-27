@@ -117,7 +117,7 @@ var MENU = function() {
         return this.expand() ? this.get_max_height() : 0; };
       this.get_trans_speed = function() {
         var height = this.max_height.substr(0,this.max_height.length-2);
-        var constant = this.parent ? 0.3 : 0.1;
+        var constant = this.parent ? 0.25 : 0.075;
         return constant + height/300 + 's';
       };
       this.trans_speed = this.get_trans_speed();
@@ -190,6 +190,7 @@ var MENU = function() {
       var section;
       if(data.section.hasOwnProperty(sec)) { // ignore prototype
         section = new obj.ViewportButton(sec, data.section[sec], true);
+        section.set_vp();
         sec_count++;
         test(['result_in', section.name + ' (obj)', 'ViewportButton', section]);
       }
@@ -197,6 +198,7 @@ var MENU = function() {
         if(data.subsection[sec].hasOwnProperty(subsec)) {
           var subsection = new obj.ViewportButton(subsec, data.subsection[sec][subsec], false);
           subsecs.push(subsection);
+          subsection.set_vp();
           subsec_count++;
           test(['result_in', subsection.name + ' (obj)', 'ViewportButton', subsection]);
         }
@@ -266,13 +268,13 @@ var MENU = function() {
     }
     
     test(['end'], ['index(sort)']); 
-    test(['result_out'], ['unit_control']);
-    
+    test(['result_out'], ['unit_control']);   
  
     return unit_control;
   };
   
   var assemble = construct(obj,data);
+  
   return index(assemble);
   
   /********************************/
@@ -291,28 +293,26 @@ var checked;
 ////////////////////////////////////////////////////////////  
 $(document).ready(function() {//////////////////////////////
   
-  
-  
-  $('input.sub + label').mouseup(function(event) {  
-    var sub_clean = $(this).prev(':input').attr('id');
-    var sub_input = '#'+sub_clean; 
-    $(sub_input).click();
-  });
+//   $('input.sub + label').mouseup(function(event) {  
+//     var sub_clean = $(this).prev(':input').attr('id');
+//     var sub_input = '#'+sub_clean; 
+//     $(sub_input).click();
+//   });
 
   $('input[name="subsection"]').change(function(event) {    
     var sub_clean = $(this).attr('id');
     var sub_input = '#'+sub_clean; 
-    console.log(sub_input);
+    //console.log(sub_input);
     //$(sub_input).click();
     menu[sub_input].recalc_child(sub_input);
     if($('input[name="subsection"]:checked').length > 1) {
-      console.log('over limit'); 
+      //console.log('over limit'); 
       var check_arr = $('input[name="subsection"]:checked').not(sub_input).toArray();
       for(var i=0; i< menu[sub_input].child_count; i++) {
         var uncheck = menu[sub_input].children[i].id; 
         if($(uncheck).prop('checked') === true) {
-          console.log('(uncheck) = '+uncheck);
-          console.log('(sub_input) = '+sub_input);
+          //console.log('(uncheck) = '+uncheck);
+          //console.log('(sub_input) = '+sub_input);
           $(uncheck).click();
           menu[uncheck].recalc_child(uncheck);
           //$(sub_input).click();
@@ -320,18 +320,17 @@ $(document).ready(function() {//////////////////////////////
         } 
       }
     }
-    
 
     $(sub_input+' + label + div.viewport').on('transitionend', function(event) {
       var sub_input_after = '#'+$(this).prev().prev(':input').attr('id');
-      console.log('sub_input_after = '+sub_input_after);
+      //console.log('sub_input_after = '+sub_input_after);
+      //console.log(menu[sub_input_after].child_count * .13 + 's');
+      $(menu[sub_input_after].parent.viewport).css("transition",menu[sub_input_after].child_count * .13 + 's');
       menu[sub_input_after].recalc_parent();
-      
-      
     });
     
   });
-  
+
   $('input.sec').click(function(event) {
     var sec_input = '#'+event.target.id;
     
@@ -342,21 +341,18 @@ $(document).ready(function() {//////////////////////////////
     menu[sec_input].recalc_parent();
     
     if($('input.sec:checked').not(sec_input).length > 0) {
-      console.log('section overflow');
+      //console.log('section overflow');
       $('input.sec:checked').not(sec_input).click();
       $(sec_input).click();
     }
-    
-    
-    
   });
 
-//   $('ul.sections').css({
+//   $('#mimeoAccordion').css({
 //     'position': 'absolute',
-//     'left': '50%',
+
 //     'top': '50%',
-//     'margin-left': $(this).outerWidth(true)/2 * -1,
-//     'margin-top': $(this).outerHeight(true)/2 * -1
+
+//     'margin-top': -$(this).outerHeight(true)/2  + $('.account_links').outerHeight(true)
 //   });
   
 });////////////////////////////////////////////////////////
