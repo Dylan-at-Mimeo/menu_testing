@@ -1,0 +1,3 @@
+Dynamic CSS Class tactics:
+-object for every dynamic element
+-array of arrays[2] to act as simplified style objects?

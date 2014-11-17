@@ -1,0 +1,2 @@
+inefficiency - jQuery is easy to write inefficiently. For instance, using jQuery's each instead of for loops is unnecessary and could have a performance impact in some cases. Lots of good info about this stuff at JSPerf
+

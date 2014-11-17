@@ -35,7 +35,6 @@ var MENU = function() {
         for(var i=0; i < this.child_count; i++) {
           this.children[i].viewport.css('max-height',this.children[i].height());
         }
-        console.log('SectionUnit[recalc]: (viewport) - ' + this.parent.viewport;
       };
     }, // SectionUnit
     /********************************/
@@ -65,17 +64,11 @@ var MENU = function() {
       this.index = this.buildIndex(index_units);
       this.calcSection = function(id) {
         for(var i=0; i < this.index_count; i++) {
-          console.log('SectionIndex[calcSection]: id=');
-          console.log(id);
-          console.log('SectionIndex[calcSection]:')
-          console.log(this.index[i].sec_id);
           if(this.index[i].sec_id == id) {
-            console.log('SectionIndex[calcSection]: this.index[i].sec_id == id');
             this.index[i].unit.recalc();
             break;
           }          
         }
-        console.log('SectionIndex[calcSection]:' + id);
       };
     } // SectionIndex
   }; // obj

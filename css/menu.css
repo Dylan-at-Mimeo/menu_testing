@@ -8,66 +8,68 @@
     To change this template use Tools | Templates.
 */
 
- root {
+root {
    display: block;
  }
- body {
-   margin: 0;
-   min-height: 100vh;
-   font-size: 62.5%;
-   letter-spacing: .1113ch;
-   line-height: 1.45;
-   text-rendering: optimizeLegibility;
-   
-   background-color: rgb(80,80,90);
- }
- div[id="responsive_menu"] > ul {
-   list-style: none;
-   margin: 0; padding: 0;
- }
- 
-div[id="responsive_menu"] > ul:not(.account_links) > li {
-  border-top: solid .0375em rgb(56, 56, 56);
-  border-bottom: solid .0375em  rgb(56, 56, 56);
+html,body {
+  margin: 0;
+  border: 0px;
+  margin: 0px;
 }
-div[id="responsive_menu"] > ul:not(.account_links) > li:first-child {
-   border-top: solid 0em  rgb(56, 56, 56);
-   border-bottom: solid .0375em  rgb(56, 56, 56);
+body {
+  min-height: 100vh;
+  font-size: 62.5%;
+  font-size: 52.5%;
+  letter-spacing: .1113ch;
+  line-height: 1.45;
+  text-rendering: optimizeLegibility;
+  background-color: rgb(80,80,90);
  }
-div[id="responsive_menu"] > ul:not(.account_links) > li:last-child {
-  border-top: solid .0375em rgb(56, 56, 56);
-  border-bottom: solid 0em rgb(56, 56, 56);
+
+* {
+  box-sizing: border-box;
+}
+
+div[id="responsive_menu"] ul,
+div[id="responsive_menu"] li {
+  overflow: hidden;
 }
 
  /*************************************
                 Font Size
 *************************************/
-
+input[type="checkbox"][class*="def"][class*="sec"] + label {
+  height: 2em;
+}
 input[type="checkbox"][class*="def"][class*="sec"] + label > span {
-  font-size: .85em;
+  font-size: .95em;
   padding: .5em 0 .5em 0;
-  font-family: 'OpenSans_Regular', sans-serif;
+  font-family: 'OpenSans_Semibold', sans-serif;
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+input[type="checkbox"][class*="def"][class*="sec"] + label > span::first-letter {
+ 
+  
 }
 input[type="checkbox"][class*="def"][class*="sub"]  + label > span {
-  font-size: .65em;
+  font-size: .95em;
   line-height: 0;
   margin-bottom: .2em; 
-  font-family: 'OpenSans_Regular', sans-serif;
+  font-family: 'OpenSans_Semibold', sans-serif;
 }
 input[type="checkbox"][class*="def"][class*="link"]  + label > span {
-  font-size: .65em;
+  font-size: .5em;
   line-height: 0;
   vertical-align: bottom;
   padding-bottom: 1.25em;
-  font-family: 'OpenSans_Regular', sans-serif;
+  font-family: 'OpenSans_Light', sans-serif;
 }
-
-
-
-
-
-
-
+input[type="checkbox"][class*="def"][class*="sub"] ~ 
+div[class="viewport"] > ul > li > a > span {
+  font-family: 'OpenSans_Light', sans-serif;
+  font-size: .95em;
+}
  /*************************************
                 Default
 *************************************/
@@ -79,7 +81,6 @@ input[type="checkbox"][class*="def"][class*="link"]  + label > span {
    box-sizing: border-box;
    width: 100%;
    text-align: center;
-   font-family: 'Roboto-Medium';
  }
  input[type="checkbox"][class*="def"] + label > span {
    display: inline-block;
@@ -87,7 +88,6 @@ input[type="checkbox"][class*="def"][class*="link"]  + label > span {
    padding: 1em 0;
    font-size: 1em;
    letter-spacing: .1895ch;
-   font-family: 'Roboto-Light';
  }
  /************************************
                 Section
@@ -126,6 +126,7 @@ input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] {
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li > div[class*="viewport"] {
    overflow: hidden;
    max-height: 0;
+/*    height: 6.25em; */
 /*    transition: max-height .25s ease-in; */
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul,
@@ -134,6 +135,7 @@ li > div[class*="viewport"] > ul {
    list-style: none;
    padding: 0;
    margin: 0;
+  line-height: 0;
  }
 
 /************************************/
@@ -153,9 +155,9 @@ li > div[class*="viewport"] > ul {
    -webkit-user-select: none;
    background-color: rgba(58, 55, 70, 1);
    height: 2em;
-   box-shadow: inset 0 .5em 0 0em rgba(20, 0, 10, .15);
+/*    box-shadow: inset 0 .5em 0 0em rgba(20, 0, 10, .15); */
    max-height: 0;
-   border-top: 0 solid rgba(245, 235, 235, 1);
+/*    border-top: 0 solid rgba(245, 235, 235, 1); */
    -webkit-transition: max-height .35s ease-in, border-top .65s ease-in;
            transition: max-height .35s ease-in, border-top .65s ease-in;
    -webkit-transition-delay: .1s;
@@ -171,8 +173,8 @@ li > div[class*="viewport"] > ul {
  }
  input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] + span {
    max-height: 2em;
-   border-top: .1em solid rgba(245, 235, 235, 1);
-   box-shadow: inset 0 .5em 0 0em rgba(20, 0, 10, .15);
+/*    border-top: .1em solid rgba(245, 235, 235, 1); */
+   box-shadow: inset 0 .25em 0 0em rgba(20, 0, 10, .15);
    -webkit-transition: max-height .35s ease-out, border-top .65s ease-out;
            transition: max-height .35s ease-out, border-top .65s ease-out;
    -webkit-transition-delay: .05s;
@@ -186,40 +188,25 @@ li > div[class*="viewport"] > ul {
  input[type="checkbox"][class*="def"][class*="sub"] {
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label {
+   display: inline-block;
+   height: 2em;
+   
    text-align: left;
-   line-height: 1.25;
-   padding-bottom: 0.175em;
+   line-height: 0;
    padding-left: 7.5%;
    box-sizing: border-box;
    background-color: rgb(200, 200, 200);
-   box-shadow: inset 0 -.15em 0 0 rgba(72, 72, 72, .5);
-   border-bottom: 0em solid rgba(149, 149, 149, .85);
-   border-top: 0em solid rgba(149, 149, 149, .5);
-   -webkit-transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color .2s ease;
-           transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color .2s ease;
-   -webkit-transition-delay: .25s;
-           transition-delay: .25s;
+
  }
  input[type="checkbox"][class*="def"][class*="sec"]:checked ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label {
-   border-bottom: .15em solid rgba(149, 149, 149, .5);
-   border-top: .15em solid rgba(149, 149, 149, .5);
-   -webkit-transition: border-top .15s ease-out, border-bottom .15s ease-out, background-color .2s ease;
-           transition: border-top .15s ease-out, border-bottom .15s ease-out, background-color .2s ease;
+
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label:hover {
-   background-color: rgb(155, 155, 160);
-   border-bottom: .25em solid rgba(229, 229, 229, .5);
-   border-top: .25em solid rgba(129, 29, 229, .5);
-   box-shadow: inset 0 -.15em 0 0 rgba(172, 172, 172, .75);
-   -webkit-transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color 2s ease;
-           transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color 2s ease;
+
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label:active {
    background-color: rgb(125, 125, 130);
-   border-bottom: .25em solid rgba(199, 99, 99, 1);
-   border-top: .25em solid rgba(199, 99, 99, 1);
-   -webkit-transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color 2s ease;
-           transition: border-top .15s ease-in, border-bottom .15s ease-in, background-color 2s ease;
+
  }
  /* input[type="checkbox"][class*="def"][class*="sub"] + label {
   background-color: rgba(131, 232, 129,1);
@@ -230,7 +217,7 @@ li > div[class*="viewport"] > ul {
 } */
  /* ^^^ */
  input[type="checkbox"][class*="def"][class*="sub"] + label > span {
-   padding: .378375em 0;
+/*    padding: .378375em 0; */
    color: rgba(245, 235, 235, 1);
  }
  input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] input[type="checkbox"][class*="def"][class*="sub"] + label:hover > span {
@@ -398,60 +385,84 @@ input[type="checkbox"][class*="def"][class*="link"] + label:active  > span{
 /************************************
             UL/LI for Links
 *************************************/
-input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li >
+
 input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul {
   padding-bottom: .075em;
-  width: 100%;
   margin-left: .15%;
   
 }
 input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul > li {
   display: inline-block;
   box-sizing: border-box;
-  width: 49%;
+  width: 50%;
   vertical-align: top;
   margin-left: 1%;
   clear: both;
   float: left;
 }
 
-input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul > li:nth-child(even) {
+
+input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul > li {
 /*   box-shadow: inset 0.2em  -0.3em 0 .05em rgba(125,15,48,.75); */
   border-right: none;
 /*   border-left: 0.075em solid rgba(245, 235, 235, 1); */
   margin-left: 0;
-  float: none;
-  clear: left;
- 
+  float: left;
+  clear: none;
 } 
-
-
-
-
-
-
-
 
 
 div[id="responsive_menu"] {
   min-height: 100vh; 
-  background-color: rgb(25, 25, 25);
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: #2b2e30;
+}
+ div[id="responsive_menu"] > ul:not(#bot_icons) {
+   font-size: 80%;
+   list-style: none;
+   margin: 0; padding: 0;
+   display: block;
+   box-sizing: border-box;
+ }
+div[id="responsive_menu"] > ul[id="mimeoAccordion"] > li > input[class*="def"][class*="sec"] + label {
+  
 }
 
-ul[class="account_links"] {
+
+div[id="responsive_menu"] > ul:not(.account_links) > li {
+/*   border-top: solid .0375em rgb(56, 56, 56); */
+/*   border-bottom: solid .0375em   */
+  box-shadow: inset 0 0 0 .0375em rgb(56, 56, 56);
+}
+/* div[id="responsive_menu"] > ul:not(.account_links) > li:first-child {
+   border-top: solid 0em  rgb(56, 56, 56);
+   border-bottom: solid .0375em  rgb(56, 56, 56);
+ }
+div[id="responsive_menu"] > ul:not(.account_links) > li:last-child {
+  border-top: solid .0375em rgb(56, 56, 56);
+  border-bottom: solid 0em rgb(56, 56, 56);
+} */
+
+div[id="responsive_menu"] > ul[class*="account_links"],
+div[id="responsive_menu"] > ul[class*="account_links"] > li {
+  height: 2em;
+}
+div[id="responsive_menu"] > ul[class*="account_links"] {
   list-style: none; 
   margin: 0; padding: 0;
   display: block;
   width: 100%;
-}
-ul[class="account_links"] > li {
+ }
+div[id="responsive_menu"] > ul[class*="account_links"] > li {
+  font-variant: small-caps;
   display: inline-block;
   box-sizing: border-box;
   width: 50%;
   float: left;
   clear: none;
   text-align: center;
-  padding: .5em 0;
+  /*padding: .1em 0;*/
 }
 ul[class="account_links"] > li:first-child {
   background-color: rgba(1, 202, 99, 1);
@@ -461,12 +472,49 @@ ul[class="account_links"] > li:last-child {
   border-left: .05em solid rgba(28, 29, 31, 1);
 }
 ul[class="account_links"] > li > span {
-  font-family: 'Roboto-Light';
-  font-size: .65em;
+  font-family: 'OpenSans_Semibold';
+  font-size: .95em;
   letter-spacing: 0.1895ch;
   color: rgba(245, 245, 250, 1);
   display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  padding-top: .25em;
 }
+ul[id="bot_icons"],
+ul[id="bot_icons"] > li {
+  height: 2em;
+}
+ul[id="bot_icons"] {
+  border-top: .1em solid rgb(40,40,40);
+  width: 100%;
+  list-style: none;
+  margin: 0; padding: 0;
+  position: fixed;
+  width: 100%;
+  display: block;
+  bottom: 0;
+  z-index: 999;
+}
+ul[id="bot_icons"] > li {
+  width: 50%;
+  display: inline-block;
+  float: left; clear: none;
+  text-align: center;
+  background-color: #2b2e30;
+  color: rgba(245, 235, 235, 1);
+  box-sizing: border-box;
+}
+.fa-question-circle:before,
+.fa-search:before {
+  padding-top: .35em;
+  vertical-align: middle;
+}
+ul[id="bot_icons"] > li:nth-child(2) {
+  border-left: .075em solid rgb(56, 56, 56);
+  border-right: .075em solid rgb(56, 56, 56);
+} 
+
 
 input[class="respon_menu_search"] {
   border-radius: .1em;
@@ -495,39 +543,13 @@ ul[class="sections"] {
   margin: 0; padding: 0;
 }
 ul[class="sections"] > li {
-  border-bottom: .1em solid rgb(60,60,60);
-}
-
-
-
-ul[id="bot_icons"] {
-  width: 100%;
-  list-style: none;
-  margin: 0; padding: 0;
-  position: fixed;
-  height: 3em;
-  width: 100%;
-  display: block;
-
-  margin-top: calc(100% - 1.5em);
-  bottom: 0;
-  z-index: 999;
-}
-ul[id="bot_icons"] > li {
-  width: 25%;
-  display: inline-block;
-  float: left; clear: none;
-  margin-top: .5em;
-  padding: .75em 0;
-  text-align: center;
-  background-color: rgb(51, 51, 51);
-  color: rgba(245, 235, 235, 1);
   box-sizing: border-box;
+  border-bottom: .1em solid rgb(40,40,40);
 }
-ul[id="bot_icons"] > li:nth-child(2) {
-  border-left: .075em solid rgb(56, 56, 56);
-  border-right: .075em solid rgb(56, 56, 56);
-} 
+
+
+
+
 li.iconli {
   
 }
@@ -536,15 +558,20 @@ li.iconli {
 /*//////////////////////*/
 /************************/
 /*********  UL  *********/
-input[type="checkbox"][class*="def"][class*="sec"] ~ div[class*="viewport"] > ul > li > input[type="checkbox"][class*="def"][class*="sub"] ~ div[class*="viewport"] > ul {
-  height: 100%;
-  width: 200%;
+input[type="checkbox"] ~ 
+div[class*="viewport"] > ul > li > 
+input[type="checkbox"][class*="def"][class*="sub"] ~ 
+div[class*="viewport"] > ul {
+/*   max-height: 6.25em; */
+  width: 100%;
+/*   height: 100%; */
   margin: 0; padding: 0;
   display: block;
   background-color: rgb(0, 150, 73);
-  border-bottom: solid 0.075em rgb(0, 74, 36);
+
   box-sizing: border-box;
 }
+
 /************************/
 /********* /UL  *********/
 /*//////////////////////*/
@@ -554,43 +581,53 @@ input[type="checkbox"][class*="def"][class*="sub"] ~
 div[class="viewport"] > ul > li {
   margin: 0; padding: 0;
   width: 100%;
-  line-height: 1;
-  float: none; clear: none;
-  height: 1.6em;
-  padding-top: .45em;
+/*   float: left;  */
+/*   clear: none; */
+  clear: both;
+  height: 2em;
+  padding-top: .25em;
+/*   padding-top: .45em; */
   box-sizing: border-box;
   display: inline-block;
 }
 input[type="checkbox"][class*="def"][class*="sub"] ~
 div[class="viewport"] > ul > li {
   padding-left: .15em;
-  box-shadow: inset 0em -.08em 0em 0.1em rgb(0, 150, 73);
-  border-top: 0.075em solid rgb(1, 202, 99);
-  clear: none;
-  width: 50%;
+/*   box-shadow: inset 0em -.08em 0em 0.1em rgb(0, 150, 73);
+  border-top: 0.075em solid rgb(1, 202, 99); */
+  clear: both;
+/*   width: 50%; */
+  position: relative;
+  z-index: 2;
 }
-input[type="checkbox"][class*="def"][class*="sub"] ~
+/* input[type="checkbox"][class*="def"][class*="sub"] ~
 div[class="viewport"] > ul > li:nth-child(5), 
 input[type="checkbox"][class*="def"][class*="sub"] ~
 div[class="viewport"] > ul > li:last-child {
   box-shadow: none;
   border-bottom: none;
-} 
+}  */
 input[type="checkbox"][class*="def"][class*="sub"] ~
 div[class="viewport"] > ul > li:nth-child(n+6) {
-  float: right;
-  clear: right;
+  float: none;
 }
+/* input[type="checkbox"][class*="def"][class*="sub"] ~
+div[class="viewport"] > ul > li:nth-child(1) > a { margin-top: -0.51em; } */
+
+/* 
 input[type="checkbox"][class*="def"][class*="sub"] ~
-div[class="viewport"] > ul > li:nth-child(1) > a { margin-top: -0.51em; }
+div[class="viewport"] > ul > li:nth-child(6) { margin-top: -6em; }
 input[type="checkbox"][class*="def"][class*="sub"] ~
-div[class="viewport"] > ul > li:nth-child(6) { margin-top: -6.4em; }
+div[class="viewport"] > ul > li:nth-child(7) { margin-top: -4.5em; }
 input[type="checkbox"][class*="def"][class*="sub"] ~
-div[class="viewport"] > ul > li:nth-child(7) { margin-top: -4.8em; }
+div[class="viewport"] > ul > li:nth-child(8) { margin-top: -3em; }
 input[type="checkbox"][class*="def"][class*="sub"] ~
-div[class="viewport"] > ul > li:nth-child(8) { margin-top: -3.2em; }
+div[class="viewport"] > ul > li:nth-child(9) { margin-top: -1.5em; }
 input[type="checkbox"][class*="def"][class*="sub"] ~
-div[class="viewport"] > ul > li:nth-child(9) { margin-top: -1.6em; }
+div[class="viewport"] > ul > li:nth-child(10) {  }
+ */
+
+
 /************************/
 /********* /LI  *********/
 /*//////////////////////*/
@@ -599,14 +636,15 @@ div[class="viewport"] > ul > li:nth-child(9) { margin-top: -1.6em; }
 input[type="checkbox"][class*="def"][class*="sub"] ~
 div[class="viewport"] > ul > li > a {
   text-decoration: none;
-  border-left: 1em solid rgb(1, 202, 99);
+/*   border-left: 1em solid rgb(1, 202, 99); */
   box-sizing: border-box;
-  float: left;
-  height: 1.5em;
+  /*float: left;*/
+  height: 100%;
   width: 100%;
-  margin-top: -0.5em;
+  display: inline-block;
+/*   margin-top: -0.5em; */
   margin-left: -.15em;
-  box-shadow: inset 0em -.08em 0em 0em rgb(0, 150, 73);
+/*   box-shadow: inset 0em -.08em 0em 0em rgb(0, 150, 73); */
 }
 /************************/
 /*********  /A  *********/
@@ -615,21 +653,15 @@ div[class="viewport"] > ul > li > a {
 /********* SPAN *********/
 input[type="checkbox"][class*="def"][class*="sub"] ~ 
 div[class="viewport"] > ul > li > a > span {
-  box-sizing: padding-box;
+  box-sizing: border-box;
   color: #f5f5fa;
-  display: block;
-  font-family: "OpenSans_Regular",sans-serif;
-  font-size: 0.5em;
-  line-height: 1.25;
-  margin-left: 7%;
-  overflow: hidden;
-  background-color: rgba(0, 150, 73,1);
-  box-shadow:  0em 0em 0em 0em rgba(0, 125, 60, 0.4);
+/*   display: inline-block; */
+  line-height: 1.5;
   letter-spacing: .1895ch;
-  margin-top: 1em;
+
   margin-left: calc(7% + .15em);
   height: 1.5em;
-  
+  display: inline-block;
   -webkit-transition: background-color 0.25s ease-in-out, 
     box-shadow 0.25s ease-in-out, 
     letter-spacing .25s ease-in-out;
@@ -676,8 +708,8 @@ input[id="capa_5"][name="next_five"] + label {
   position: absolute;
   display: block;
   box-sizing: border-box;
-  top: 1.5em; right: 0;
-  height: calc(100% - 1.4em); 
+  right: 0;
+  height: calc(100% - 1.125em);
   box-shadow: 0 -0.1em 0 0.1em #383838 inset;
   border: solid 0em rgba(21, 21, 21, 0.85);
   overflow: hidden;
@@ -736,8 +768,8 @@ input[name="subsection"]:checked ~ div[class="viewport"] >
 input[id="reso_5"][name="next_five"] + label,
 input[name="subsection"]:checked ~ div[class="viewport"] >
 input[id="capa_5"][name="next_five"] + label{
-  max-height: calc(100% - 1.5em); 
-  border: solid .075em rgba(21, 21, 21, 0.85);
+  max-height: 6.25em; 
+/*   border: solid .075em rgba(21, 21, 21, 0.85); */
    transition: max-height .35s ease-in-out -.35s, 
     margin-right .35s ease-in-out .15s, 
     background-color .35s ease-in-out .1s,
